@@ -1,0 +1,8 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0     26   04/07/19 16:42:33:440 COT   04/07/19 16:42:33:571 COT java.net.MalformedURLException com.ibm.ws.kernel.launch.internal.ProvisionerImpl 282
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.42.33.0.log
+     1     26   04/07/19 16:42:33:571 COT   04/07/19 16:42:33:584 COT java.net.MalformedURLException com.ibm.ws.kernel.launch.internal.ProvisionerImpl checkInstallStatus
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.42.33.1.log
+------+------+---------------------------+---------------------------+---------------------------

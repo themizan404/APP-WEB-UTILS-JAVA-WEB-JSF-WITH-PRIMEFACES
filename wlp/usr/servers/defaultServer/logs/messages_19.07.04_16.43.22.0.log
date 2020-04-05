@@ -1,0 +1,13 @@
+********************************************************************************
+product = Open Liberty 19.0.0.3 (wlp-1.0.26.cl190320190321-1636)
+wlp.install.dir = D:/devel/tools/wlp/
+java.home = C:\Program Files\Java\jre1.8.0_211
+java.version = 1.8.0_211
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_211-b12)
+os = Windows 10 (10.0; amd64) (es_PE)
+process = 11336@DESKTOP-DIRMJ0E
+********************************************************************************
+[04/07/19 16:40:33:885 COT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: El servidor defaultServer se ha lanzado.
+[04/07/19 16:41:36:615 COT] 00000011 com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Conclusión del servidor solicitada el jueves 4 de julio de 2019 a las 04:41 PM. El servidor defaultServer se está cerrando.
+[04/07/19 16:42:33:553 COT] 00000001 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.net.MalformedURLException: unknown protocol: reference com.ibm.ws.kernel.launch.internal.ProvisionerImpl 282" en ffdc_19.07.04_16.42.33.0.log
+[04/07/19 16:42:33:583 COT] 00000001 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.net.MalformedURLException: unknown protocol: reference com.ibm.ws.kernel.launch.internal.ProvisionerImpl checkInstallStatus" en ffdc_19.07.04_16.42.33.1.log

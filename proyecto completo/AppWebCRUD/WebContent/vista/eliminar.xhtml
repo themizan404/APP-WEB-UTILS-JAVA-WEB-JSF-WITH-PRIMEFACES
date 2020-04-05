@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body style="margin:0px;">
+	    <p:breadCrumb>
+		    <p:menuitem value="Index" url="http://localhost:9080/AppWebCRUD/faces/vista/index.xhtml" />
+		    <p:menuitem value="Crear" url="http://localhost:9080/AppWebCRUD/faces/vista/crear.xhtml" />
+		    <p:menuitem value="Administrar" url="http://localhost:9080/AppWebCRUD/faces/vista/index.xhtml" />
+		</p:breadCrumb>
+			
+		<h:form id="form">
+			<div style="padding:15px;">
+			
+				<div style="padding:15px;">
+					<p:outputLabel value="Nombre: " style="font-weight:bold;"/>
+					<p:outputLabel value="#{eliminarUsuario.usuario.nombre}" style="width:100%"/>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:outputLabel value="Apellido: " style="font-weight:bold;"/>
+					<p:outputLabel value="#{eliminarUsuario.usuario.apellido}" style="width:100%"/>
+				</div>
+
+				<div style="padding:15px;">
+					<p:outputLabel value="Edad: " style="font-weight:bold;"/>
+					<p:outputLabel value="#{eliminarUsuario.usuario.edad}" style="width:100%"/>
+				</div>
+
+				<div style="padding:15px;">
+					<p:outputLabel value="Pais: " style="font-weight:bold;"/>
+					<p:outputLabel value="#{eliminarUsuario.usuario.pais}" style="width:100%"/>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:outputLabel value="Dni: " style="font-weight:bold;"/>
+					<p:outputLabel value="#{eliminarUsuario.usuario.dni}" style="width:100%"/>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:commandButton value="Eliminar" action="#{eliminarUsuario.delete}" ajax="true" style="width:100%"/>
+					<p:spacer width="10"/>
+					<p:button value="Cancelar" outcome="index" style="width:100%"/>
+				</div>
+				
+			</div>
+		</h:form>
+		
+    </h:body>
+</html>

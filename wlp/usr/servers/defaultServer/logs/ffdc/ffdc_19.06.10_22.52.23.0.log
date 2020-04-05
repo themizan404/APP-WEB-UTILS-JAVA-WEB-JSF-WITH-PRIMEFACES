@@ -1,0 +1,20 @@
+------Start of DE processing------ = [10/06/19 22:52:23:353 PDT]
+Exception = java.lang.OutOfMemoryError
+Source = com.ibm.ws.tcpchannel.internal.SocketRWChannelSelector
+probeid = 254
+Stack Dump = java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.iterator(ArrayList.java:976)
+	at java.base/sun.nio.ch.WindowsSelectorImpl.updateSelectedKeys(WindowsSelectorImpl.java:512)
+	at java.base/sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:180)
+	at java.base/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124)
+	at java.base/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:136)
+	at com.ibm.ws.tcpchannel.internal.ChannelSelector.run(ChannelSelector.java:144)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+Dump of callerThis
+Object type = com.ibm.ws.tcpchannel.internal.SocketRWChannelSelector
+  strings[0] = "Inbound Write Selector.1"
+  strings[1] = "quit: false"
+  strings[2] = "waitingToQuit: false"
+  strings[3] = "# of keys=0"
+

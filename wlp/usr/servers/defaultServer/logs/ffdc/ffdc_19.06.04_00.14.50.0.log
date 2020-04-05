@@ -1,0 +1,287 @@
+------Start of DE processing------ = [4/06/19 00:14:50:113 PET]
+Exception = javax.ejb.NoSuchEJBException
+Source = com.ibm.ejs.csi.EJBApplicationMetaData.createStartupBeans
+probeid = 6921
+Stack Dump = javax.ejb.NoSuchEJBException: An error occurred during initialization of singleton session bean security#security.war#JsonConfig, resulting in the discarding of the singleton instance.; nested exception is: java.lang.IllegalStateException: Managed Class {util.web.JsonConfig} does not match Bean Class {util.web.JsonConfig}
+	at com.ibm.ejs.container.util.ExceptionUtil.NoSuchEJBException(ExceptionUtil.java:431)
+	at com.ibm.ejs.container.EJSHome.createSingletonBeanO(EJSHome.java:3754)
+	at com.ibm.ejs.csi.EJBApplicationMetaData.createStartupBeans(EJBApplicationMetaData.java:958)
+	at com.ibm.ejs.csi.EJBApplicationMetaData.startedModule(EJBApplicationMetaData.java:679)
+	at com.ibm.ws.ejbcontainer.osgi.internal.EJBRuntimeImpl.start(EJBRuntimeImpl.java:1009)
+	at com.ibm.ws.ejbcontainer.osgi.internal.EJBContainerImpl.startEJBInWARModule(EJBContainerImpl.java:194)
+	at com.ibm.ws.ejbcontainer.war.internal.EJBWARRuntimeImpl.moduleStarting(EJBWARRuntimeImpl.java:60)
+	at com.ibm.ws.container.service.state.internal.ModuleStateManager.fireStarting(ModuleStateManager.java:28)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireModuleStarting(StateChangeServiceImpl.java:80)
+	at com.ibm.ws.app.manager.module.internal.ModuleHandlerBase.deployModule(ModuleHandlerBase.java:90)
+	at com.ibm.ws.app.manager.module.internal.DeployedModuleInfoImpl.installModule(DeployedModuleInfoImpl.java:49)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployModules(DeployedAppInfoBase.java:430)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:416)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:140)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1261)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.performAction(ApplicationStateMachineImpl.java:1141)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:884)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.IllegalStateException: Managed Class {util.web.JsonConfig} does not match Bean Class {util.web.JsonConfig}
+	at com.ibm.ws.cdi.impl.managedobject.CDIEJBManagedObjectFactoryImpl.getBean(CDIEJBManagedObjectFactoryImpl.java:122)
+	at com.ibm.ws.cdi.impl.managedobject.CDIEJBManagedObjectFactoryImpl.createContext(CDIEJBManagedObjectFactoryImpl.java:81)
+	at com.ibm.ejs.container.ManagedBeanOBase.createInterceptorsAndInstance(ManagedBeanOBase.java:198)
+	at com.ibm.ejs.container.SingletonBeanO.initialize(SingletonBeanO.java:276)
+	at com.ibm.ejs.container.BeanOFactory.create(BeanOFactory.java:103)
+	at com.ibm.ejs.container.EJSHome.createSingletonBeanO(EJSHome.java:3740)
+	... 20 more
+
+Dump of callerThis
+Object type = com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBApplicationMetaData
+  modulesMap = class java.util.HashMap@115dab8a
+    serialVersionUID = 362498820763181265
+    DEFAULT_INITIAL_CAPACITY = 16
+    MAXIMUM_CAPACITY = 1073741824
+    DEFAULT_LOAD_FACTOR = 0.75
+    TREEIFY_THRESHOLD = 8
+    UNTREEIFY_THRESHOLD = 6
+    MIN_TREEIFY_CAPACITY = 64
+    table = class java.util.HashMap$Node[16]
+      Node[0] = null
+      Node[1] = class java.util.HashMap$Node@1bbe3970
+      Node[2] = null
+      Node[3] = null
+      Node[4] = null
+      Node[5] = null
+      Node[6] = null
+      Node[7] = null
+      Node[8] = null
+      Node[9] = null
+      Node[10] = null
+      Node[11] = null
+      Node[12] = null
+      Node[13] = null
+      Node[14] = null
+      Node[15] = null
+    entrySet = null
+    size = 1
+    modCount = 1
+    threshold = 12
+    loadFactor = 0.75
+    keySet = null
+    values = null
+  serialVersionUID = 4224454255285273476
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@7d43faed
+    strings[0] = "TraceComponent[com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBApplicationMetaData,class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBApplicationMetaData,[EJBContainer],com.ibm.ws.ejbcontainer.osgi.internal.resources.EJBContainerMessages,null]"
+  CLASS_NAME = "com.ibm.ejs.csi.EJBApplicationMetaData"
+  tc = class com.ibm.websphere.ras.TraceComponent@5024da26
+    strings[0] = "TraceComponent[com.ibm.ejs.csi.EJBApplicationMetaData,class com.ibm.ejs.csi.EJBApplicationMetaData,[EJBContainer],com.ibm.ejs.container.container,null]"
+  ivContainer = class com.ibm.ejs.container.EJSContainer@2d70238b
+  ivName = "security"
+  ivLogicalName = null
+  ivStandaloneModule = true
+  ivApplicationMetaData = class com.ibm.ws.container.service.app.deploy.internal.ApplicationMetaDataImpl@10c7fbd0
+    j2eeName = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@91a9772
+      serialVersionUID = 7488184044073147667
+      application = "security"
+      module = null
+      component = null
+      string = "security"
+      j2eeNameBytes = null
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@15889656
+    serialVersionUID = -7906531148367236579
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@74d8dc4
+      strings[0] = "TraceComponent[com.ibm.ws.container.service.app.deploy.internal.ApplicationMetaDataImpl,class com.ibm.ws.container.service.app.deploy.internal.ApplicationMetaDataImpl,[container.service],com.ibm.ws.container.service.resources.Messages,null]"
+    tc = class com.ibm.websphere.ras.TraceComponent@531c7541
+      strings[0] = "TraceComponent[com.ibm.ws.runtime.metadata.MetaDataImpl,class com.ibm.ws.runtime.metadata.MetaDataImpl,[Runtime],null,null]"
+    NUM_STATIC_SLOTS = 4
+    ID_UNINITIALIZED = -1
+    id = 0
+    metaDataInterface = class java.lang.Class@621e9a60
+      ANNOTATION = 8192
+      ENUM = 16384
+      SYNTHETIC = 4096
+      cachedConstructor = null
+      name = "com.ibm.ws.runtime.metadata.ApplicationMetaData"
+      module = class java.lang.Module@2c224428
+      packageName = "com.ibm.ws.runtime.metadata"
+      componentType = {} /* array length = 0 */
+      allPermDomain = class java.security.ProtectionDomain@fd5a092
+      reflectionData = null
+      classRedefinedCount = 0
+      genericInfo = null
+      EMPTY_CLASS_ARRAY = class java.lang.Class[0]
+      serialVersionUID = 3206093459760846163
+      serialPersistentFields = class java.io.ObjectStreamField[0]
+      reflectionFactory = class jdk.internal.reflect.ReflectionFactory@641f40c8
+      enumConstants = null
+      enumConstantDirectory = null
+      annotationData = null
+      annotationType = null
+      classValueMap = null
+    staticSlots = class java.lang.Object[4]
+      Object[0] = null
+      Object[1] = class com.ibm.ws.injectionengine.osgi.internal.OSGiInjectionScopeData@7a3abc21
+      Object[2] = null
+      Object[3] = class com.ibm.ws.container.service.naming.JavaColonNamespaceBindings@42a5a486
+    dynamicSlots = class java.lang.Object[4]
+      Object[0] = class com.ibm.ws.ejbcontainer.osgi.internal.metadata.OSGiEJBApplicationMetaData@7090396b
+      Object[1] = class com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl@4f5eaa39
+      Object[2] = "security"
+      Object[3] = null
+  ivModules = class java.util.LinkedHashSet@98cc08e
+    serialVersionUID = -2851667679971038690
+    serialVersionUID = -5024744406713321676
+    map = class java.util.LinkedHashMap@76fc0834
+      serialVersionUID = 3801124242820219131
+      head = class java.util.LinkedHashMap$Entry@6d213f9
+      tail = class java.util.LinkedHashMap$Entry@6d213f9
+      accessOrder = false
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 1
+      modCount = 1
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    PRESENT = class java.lang.Object@3b244200
+    MAX_ARRAY_SIZE = 2147483639
+  ivCurrentlyBlockingWork = true
+  ivBlockWorkUntilStarted = true
+  ivStartupThread = class java.lang.Thread@4c05eec1
+    name = "Default Executor-thread-21721"
+    priority = 5
+    daemon = true
+    stillborn = false
+    eetop = 2030741188608
+    target = class java.util.concurrent.ThreadPoolExecutor$Worker@4ae89b57
+      serialVersionUID = 6138294804551838833
+      thread = class java.lang.Thread@4c05eec1
+      firstTask = null
+      completedTasks = 8382
+      this$0 = class java.util.concurrent.ThreadPoolExecutor@3c384f03
+      serialVersionUID = 7373984972572414691
+      head = class java.util.concurrent.locks.AbstractQueuedSynchronizer$Node@4a1283d8
+      tail = class java.util.concurrent.locks.AbstractQueuedSynchronizer$Node@4a1283d8
+      state = 1
+      SPIN_FOR_TIMEOUT_THRESHOLD = 1000
+      STATE = class java.lang.invoke.VarHandleInts$FieldInstanceReadWrite@6911a019
+      HEAD = class java.lang.invoke.VarHandleReferences$FieldInstanceReadWrite@27d7baac
+      TAIL = class java.lang.invoke.VarHandleReferences$FieldInstanceReadWrite@785c1e2f
+      serialVersionUID = 3737899427754241961
+      exclusiveOwnerThread = class java.lang.Thread@4c05eec1
+    group = class java.lang.ThreadGroup@54fbd640
+      parent = class java.lang.ThreadGroup@31f4bb51
+      name = "Default Executor Thread Group"
+      maxPriority = 10
+      destroyed = false
+      daemon = false
+      nUnstartedThreads = 0
+      nthreads = 13
+      threads = class java.lang.Thread[64]
+      ngroups = 276
+      groups = class java.lang.ThreadGroup[512]
+    contextClassLoader = class org.eclipse.osgi.internal.framework.ContextFinder@538cd0f2
+      cycleDetector = class java.lang.ThreadLocal@5d8c9f26
+      finderClassLoader = class com.ibm.ws.kernel.internal.classloader.BootstrapChildFirstJarClassloader@5f205aa
+      contextFinder = class org.eclipse.osgi.internal.framework.ContextFinder$Finder@780017dd
+      THIS = class java.lang.Class@1adb7478
+      parentContextClassLoader = class jdk.internal.loader.ClassLoaders$AppClassLoader@5451c3a8
+    inheritedAccessControlContext = class java.security.AccessControlContext@38e20c07
+      context = class java.security.ProtectionDomain[1]
+      isPrivileged = true
+      isAuthorized = true
+      privilegedContext = null
+      combiner = null
+      permissions = null
+      parent = null
+      isWrapped = false
+      isLimited = false
+      limitedContext = null
+      debugInit = false
+      debug = null
+    threadInitNumber = 266
+    threadLocals = class java.lang.ThreadLocal$ThreadLocalMap@6fd6f530
+      INITIAL_CAPACITY = 16
+      table = class java.lang.ThreadLocal$ThreadLocalMap$Entry[64]
+      size = 37
+      threshold = 42
+    inheritableThreadLocals = null
+    stackSize = 0
+    nativeParkEventPointer = 2030732064160
+    tid = 22761
+    threadSeqNumber = 23000
+    threadStatus = 5
+    parkBlocker = null
+    blocker = null
+    blockerLock = class java.lang.Object@21d42822
+    MIN_PRIORITY = 1
+    NORM_PRIORITY = 5
+    MAX_PRIORITY = 10
+    EMPTY_STACK_TRACE = class java.lang.StackTraceElement[0]
+    uncaughtExceptionHandler = null
+    defaultUncaughtExceptionHandler = null
+    threadLocalRandomSeed = -4066197471414822839
+    threadLocalRandomProbe = 1849515605
+    threadLocalRandomSecondarySeed = 1955391045
+  ivBindToServerRoot = true
+  ivBindToJavaGlobal = true
+  ivCheckConfig = false
+  ivIndirectLocalProxies = false
+  ivStartupSingletonList = class java.util.ArrayList@5bbca162
+    serialVersionUID = 8683452581122892189
+    DEFAULT_CAPACITY = 10
+    EMPTY_ELEMENTDATA = class java.lang.Object[0]
+    DEFAULTCAPACITY_EMPTY_ELEMENTDATA = class java.lang.Object[0]
+    elementData = class java.lang.Object[10]
+      Object[0] = class com.ibm.ws.container.service.metadata.internal.J2EENameImpl@34a16db9
+      Object[1] = null
+      Object[2] = null
+      Object[3] = null
+      Object[4] = null
+      Object[5] = null
+      Object[6] = null
+      Object[7] = null
+      Object[8] = null
+      Object[9] = null
+    size = 1
+    MAX_ARRAY_SIZE = 2147483639
+    modCount = 1
+    MAX_ARRAY_SIZE = 2147483639
+  ivSingletonDependencies = null
+  ivSingletonDependencyResolutionException = null
+  ivSingletonInitializations = class java.util.LinkedHashSet@27c15064
+    serialVersionUID = -2851667679971038690
+    serialVersionUID = -5024744406713321676
+    map = class java.util.LinkedHashMap@47f280f7
+      serialVersionUID = 3801124242820219131
+      head = class java.util.LinkedHashMap$Entry@2f4a2048
+      tail = class java.util.LinkedHashMap$Entry@2f4a2048
+      accessOrder = false
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 1
+      modCount = 1
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    PRESENT = class java.lang.Object@3b244200
+    MAX_ARRAY_SIZE = 2147483639
+  ivQueuedNonPersistentTimers = null
+  ivStopping = false
+  ivModuleBeingAddedLate = null
+

@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body style="margin:0px;">
+	    <p:breadCrumb>
+		    <p:menuitem value="Index" url="http://localhost:9080/AppWebCRUD/faces/vista/index.xhtml" />
+		    <p:menuitem value="Crear" url="http://localhost:9080/AppWebCRUD/faces/vista/crear.xhtml" />
+		    <p:menuitem value="Administrar" url="http://localhost:9080/AppWebCRUD/faces/vista/index.xhtml" />
+		</p:breadCrumb>
+		
+		
+		<h:form id="form">
+			<div style="padding:15px;">
+			
+				<div style="padding:15px;">
+					<p:outputLabel value="Nombre: " style="font-weight:bold;"/>
+					<p:inputText value="#{actualizarUsuario.usuario.nombre}" style="width:100%"/>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:outputLabel value="Apellido: " style="font-weight:bold;"/>
+					<p:inputText value="#{actualizarUsuario.usuario.apellido}" style="width:100%"/>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:outputLabel value="Edad: " style="font-weight:bold;"/>
+					<p:inputText style="width:100%" value="#{actualizarUsuario.usuario.edad}"/>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:outputLabel value="Pais: " style="font-weight:bold;"/>
+					<p:selectOneMenu style="width:100%" value="#{actualizarUsuario.pais_seleccionado}">
+						<f:selectItem itemLabel="Seleccionar pais" itemValue="null"/>
+						<f:selectItems value="#{actualizarUsuario.countries}"/>
+					</p:selectOneMenu>
+				</div>
+				
+				<div style="padding:15px;">
+					<p:outputLabel value="Dni: " style="font-weight:bold;"/>
+					<p:inputText style="width:100%" value="#{actualizarUsuario.usuario.dni}"/>
+				</div>
+				
+				<div style="padding:30px;">
+					<p:commandButton value="Actualizar Usuario" action="#{actualizarUsuario.update}" ajax="true" style="width:100%;"/>
+					<p:spacer width="10"/>
+					<p:button outcome="index" value="Cancelar" style="width:100%;"/>
+				</div>
+				
+			</div>
+		</h:form>
+		
+    </h:body>
+</html>

@@ -1,0 +1,132 @@
+------Start of DE processing------ = [14/05/19 02:02:11:151 PET]
+Exception = com.ibm.wsspi.adaptable.module.UnableToAdaptException
+Source = com.ibm.ws.classloading.internal.ContainerClassLoader$EntryUniversalResource
+probeid = 319
+Stack Dump = com.ibm.wsspi.adaptable.module.UnableToAdaptException: java.nio.file.NoSuchFileException: D:\devel\workspace\AsistenciaTeacher\WebContent\WEB-INF\lib\asterisk360-primefaces-7.0.jar
+	at com.ibm.ws.adaptable.module.internal.AdaptableEntryImpl.adapt(AdaptableEntryImpl.java:104)
+	at com.ibm.ws.classloading.internal.ContainerClassLoader$EntryUniversalResource.getByteResourceInformation(ContainerClassLoader.java:317)
+	at com.ibm.ws.classloading.internal.ContainerClassLoader$SmartClassPathImpl.getByteResourceInformation(ContainerClassLoader.java:922)
+	at com.ibm.ws.classloading.internal.ContainerClassLoader.findClassBytes(ContainerClassLoader.java:1488)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassBytes(AppClassLoader.java:460)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:280)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:522)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:482)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at org.primefaces.webapp.PreDestroyApplicationEventListener.processEvent(PreDestroyApplicationEventListener.java:41)
+	at javax.faces.event.SystemEvent.processListener(SystemEvent.java:49)
+	at org.apache.myfaces.application._ApplicationUtils._traverseListenerList(_ApplicationUtils.java:121)
+	at org.apache.myfaces.application.ApplicationImpl$SystemListenerEntry.publish(ApplicationImpl.java:2737)
+	at org.apache.myfaces.application.ApplicationImpl.publishEvent(ApplicationImpl.java:634)
+	at javax.faces.application.ApplicationWrapper.publishEvent(ApplicationWrapper.java:346)
+	at org.apache.myfaces.webapp.AbstractFacesInitializer._dispatchApplicationEvent(AbstractFacesInitializer.java:365)
+	at org.apache.myfaces.webapp.AbstractFacesInitializer.destroyFaces(AbstractFacesInitializer.java:408)
+	at org.apache.myfaces.webapp.StartupServletContextListener.contextDestroyed(StartupServletContextListener.java:130)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextDestroyed(WebApp.java:2603)
+	at com.ibm.ws.webcontainer.webapp.WebApp.destroy(WebApp.java:3938)
+	at com.ibm.ws.webcontainer.osgi.webapp.WebApp.destroy(WebApp.java:1479)
+	at com.ibm.ws.container.AbstractContainer.destroy(AbstractContainer.java:79)
+	at com.ibm.ws.webcontainer.webapp.WebGroup.destroy(WebGroup.java:215)
+	at com.ibm.ws.webcontainer.webapp.WebGroup.removeWebApplication(WebGroup.java:256)
+	at com.ibm.ws.webcontainer.VirtualHost.removeWebApplication(VirtualHost.java:264)
+	at com.ibm.ws.webcontainer.VirtualHost.removeWebApplication(VirtualHost.java:241)
+	at com.ibm.ws.webcontainer.WebContainer.removeWebApplication(WebContainer.java:594)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.removeModule(WebContainer.java:1211)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.stopModule(WebContainer.java:1175)
+	at com.ibm.ws.app.manager.module.internal.ModuleHandlerBase.undeployModule(ModuleHandlerBase.java:133)
+	at com.ibm.ws.app.manager.module.internal.DeployedModuleInfoImpl.uninstallModule(DeployedModuleInfoImpl.java:64)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.uninstallApp(SimpleDeployedAppInfoBase.java:497)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.uninstall(WARApplicationHandlerImpl.java:81)
+	at com.ibm.ws.app.manager.internal.statemachine.StopAction.execute(StopAction.java:83)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1286)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.performAction(ApplicationStateMachineImpl.java:1129)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:884)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.nio.file.NoSuchFileException: D:\devel\workspace\AsistenciaTeacher\WebContent\WEB-INF\lib\asterisk360-primefaces-7.0.jar
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1840)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1160)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:719)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:239)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:169)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:183)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileUtils$1.run(ZipFileUtils.java:39)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileUtils$1.run(ZipFileUtils.java:36)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:551)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileUtils.openZipFile(ZipFileUtils.java:36)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileUtils.openZipFile(ZipFileUtils.java:28)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileData.openZipFile(ZipFileData.java:545)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileData.openZipFile(ZipFileData.java:537)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileReaper.open(ZipFileReaper.java:1023)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileReaper.open(ZipFileReaper.java:976)
+	at com.ibm.ws.artifact.zip.cache.internal.ZipFileHandleImpl.open(ZipFileHandleImpl.java:153)
+	at com.ibm.ws.artifact.zip.internal.ZipFileEntry.getInputStream(ZipFileEntry.java:176)
+	at com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl$OverlayDelegatingEntry.getInputStream(DirectoryBasedOverlayContainerImpl.java:481)
+	at com.ibm.ws.adaptable.module.internal.AdaptableEntryImpl.adapt(AdaptableEntryImpl.java:102)
+	... 41 more
+
+Dump of callerThis
+Object type = com.ibm.ws.classloading.internal.ContainerClassLoader$EntryUniversalResource
+  container = class com.ibm.ws.adaptable.module.internal.AdaptableContainerImpl@44cada5e
+    root = class com.ibm.ws.adaptable.module.internal.AdaptableContainerImpl@44cada5e
+    rootOverlay = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl@64b185cb
+      base = class com.ibm.ws.artifact.zip.internal.ZipFileContainer@1ae71f1d
+      maskSet = class java.util.HashSet@528c5a12
+      cfHolder = class com.ibm.ws.artifact.overlay.internal.OverlayContainerFactoryImpl@5550113a
+      fileOverlayContainer = class com.ibm.ws.artifact.file.internal.FileContainer@48c812be
+      overlayDirectory = class java.io.File@1d44035c
+      cacheDirForOverlay = class java.io.File@3ff9e81e
+      overlayNotifier = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayNotifier@f156939
+      enclosingContainer = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl$OverlayDelegatingContainer@740d787
+      entryInEnclosingContainer = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl$OverlayDelegatingEntry@3a236ad0
+      nestedOverlays = class java.util.concurrent.ConcurrentHashMap@4aeacc92
+      cacheStore = class com.ibm.ws.artifact.overlay.internal.OverlayCache@6e123857
+      parentOverlay = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl@6fef36fd
+      isPassThroughMode = true
+      serialVersionUID = -1690795617118238166
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@64c62f92
+    factoryHolder = class com.ibm.ws.adaptable.module.internal.AdaptableModuleFactoryImpl@36c23905
+      adapterFactoryService = class com.ibm.ws.adaptable.module.internal.AdapterFactoryServiceImpl@1a0a4526
+      containerFactory = class com.ibm.ws.artifact.internal.ArtifactContainerFactoryService@72fd0471
+      overlayContainerFactory = class com.ibm.ws.artifact.overlay.internal.OverlayContainerFactoryImpl@5550113a
+      serialVersionUID = 4200251809856292987
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@1324648d
+    delegate = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl@64b185cb
+    notifier = null
+    serialVersionUID = -5621513278641113667
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@2e9177cf
+      strings[0] = "TraceComponent[com.ibm.ws.adaptable.module.internal.AdaptableContainerImpl,class com.ibm.ws.adaptable.module.internal.AdaptableContainerImpl,[archive.adaptable],,null]"
+  entry = class com.ibm.ws.adaptable.module.internal.AdaptableEntryImpl@781e48b4
+    root = class com.ibm.ws.adaptable.module.internal.AdaptableContainerImpl@44cada5e
+    rootOverlay = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl@64b185cb
+    factoryHolder = class com.ibm.ws.adaptable.module.internal.AdaptableModuleFactoryImpl@36c23905
+    delegate = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl$OverlayDelegatingEntry@10dbe461
+      delegate = class com.ibm.ws.artifact.zip.internal.ZipFileEntry@4ebbb43a
+      root = class com.ibm.ws.artifact.overlay.internal.DirectoryBasedOverlayContainerImpl@64b185cb
+      name = "Lazy.class"
+      path = "/org/primefaces/util/Lazy.class"
+      fileContainer = class com.ibm.ws.artifact.file.internal.FileContainer@48c812be
+      serialVersionUID = 8024630399631050688
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@dc50566
+    serialVersionUID = 165222222331875857
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@3a8540e8
+      strings[0] = "TraceComponent[com.ibm.ws.adaptable.module.internal.AdaptableEntryImpl,class com.ibm.ws.adaptable.module.internal.AdaptableEntryImpl,[archive.adaptable],,null]"
+  resourceName = "org/primefaces/util/Lazy.class"
+  serialVersionUID = -1285401909310327636
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@12a56d9c
+    strings[0] = "TraceComponent[com.ibm.ws.classloading.internal.ContainerClassLoader$EntryUniversalResource,class com.ibm.ws.classloading.internal.ContainerClassLoader$EntryUniversalResource,[ClassLoadingService],com.ibm.ws.classloading.internal.resources.ClassLoadingServiceMessages,null]"
+
+Dump of objectArray[0]
+Object type = java.lang.String
+  String value = "org.primefaces.util.Lazy"
+
+Dump of objectArray[1]
+null

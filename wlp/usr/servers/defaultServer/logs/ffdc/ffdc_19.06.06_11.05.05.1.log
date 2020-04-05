@@ -1,0 +1,174 @@
+------Start of DE processing------ = [6/06/19 11:05:05:585 PET]
+Exception = java.net.MalformedURLException
+Source = com.ibm.ws.kernel.launch.internal.ProvisionerImpl
+probeid = checkInstallStatus
+Stack Dump = java.net.MalformedURLException: unknown protocol: reference
+	at java.base/java.net.URL.<init>(URL.java:657)
+	at java.base/java.net.URL.<init>(URL.java:546)
+	at java.base/java.net.URL.<init>(URL.java:493)
+	at com.ibm.ws.kernel.launch.internal.ProvisionerImpl.installKernelBundle(ProvisionerImpl.java:275)
+	at com.ibm.ws.kernel.launch.internal.ProvisionerImpl.installBundles(ProvisionerImpl.java:236)
+	at com.ibm.ws.kernel.launch.internal.ProvisionerImpl.initialProvisioning(ProvisionerImpl.java:85)
+	at com.ibm.ws.kernel.launch.internal.FrameworkManager.innerLaunchFramework(FrameworkManager.java:447)
+	at com.ibm.ws.kernel.launch.internal.FrameworkManager.launchFramework(FrameworkManager.java:281)
+	at com.ibm.ws.kernel.launch.internal.LauncherDelegateImpl.doFrameworkLaunch(LauncherDelegateImpl.java:114)
+	at com.ibm.ws.kernel.launch.internal.LauncherDelegateImpl.launchFramework(LauncherDelegateImpl.java:100)
+	at com.ibm.ws.kernel.boot.internal.KernelBootstrap.go(KernelBootstrap.java:211)
+	at com.ibm.ws.kernel.boot.Launcher.handleActions(Launcher.java:242)
+	at com.ibm.ws.kernel.boot.Launcher.createPlatform(Launcher.java:117)
+	at com.ibm.ws.kernel.boot.cmdline.EnvCheck.main(EnvCheck.java:59)
+	at com.ibm.ws.kernel.boot.cmdline.EnvCheck.main(EnvCheck.java:35)
+
+Dump of callerThis
+Object type = com.ibm.ws.kernel.launch.internal.ProvisionerImpl
+  ME = "com.ibm.ws.kernel.launch.internal.ProvisionerImpl"
+  tc = class com.ibm.websphere.ras.TraceComponent@fba92d3
+    strings[0] = "TraceComponent[com.ibm.ws.kernel.launch.internal.ProvisionerImpl,class com.ibm.ws.kernel.launch.internal.ProvisionerImpl,[bootstrap],com.ibm.ws.kernel.boot.resources.LauncherMessages,null]"
+  BUNDLE_LOC_KERNEL_TAG = "kernel@"
+  serviceTracker = class org.osgi.util.tracker.ServiceTracker@30bce90b
+    DEBUG = false
+    context = class org.eclipse.osgi.internal.framework.BundleContextImpl@3d34d211
+    filter = class org.eclipse.osgi.internal.framework.FilterImpl@40317ba2
+      op = 1
+      EQUAL = 1
+      APPROX = 2
+      GREATER = 3
+      LESS = 4
+      PRESENT = 5
+      SUBSTRING = 6
+      AND = 7
+      OR = 8
+      NOT = 9
+      attr = "objectClass"
+      value = "com.ibm.ws.kernel.provisioning.LibertyBootRuntime"
+      debug = false
+      filterString = null
+    customizer = class org.osgi.util.tracker.ServiceTracker@30bce90b
+    listenerFilter = "(objectClass=com.ibm.ws.kernel.provisioning.LibertyBootRuntime)"
+    trackClass = "com.ibm.ws.kernel.provisioning.LibertyBootRuntime"
+    trackReference = null
+    tracked = class org.osgi.util.tracker.ServiceTracker$Tracked@3c01cfa1
+      this$0 = class org.osgi.util.tracker.ServiceTracker@30bce90b
+      DEBUG = false
+      tracked = class java.util.HashMap@2ce6c6ec
+      trackingCount = 0
+      adding = class java.util.ArrayList@147a5d08
+      closed = false
+      initial = class java.util.LinkedList@6676f6a0
+    cachedReference = null
+    cachedService = null
+  context = class org.eclipse.osgi.internal.framework.BundleContextImpl@3d34d211
+    findHookName = "org.osgi.framework.hooks.bundle.FindHook"
+    valid = false
+    bundle = class org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle@1e66f1f5
+      initListeners = class java.util.ArrayList@7cbd9d24
+      equinoxContainer = class org.eclipse.osgi.internal.framework.EquinoxContainer@5717c37
+      module = class org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule@1b45c0e
+      monitor = class java.lang.Object@11f0a5a1
+      context = null
+      signerInfos = null
+      $SWITCH_TABLE$org$eclipse$osgi$container$Module$State = null
+    container = class org.eclipse.osgi.internal.framework.EquinoxContainer@5717c37
+      NAME = "org.eclipse.osgi"
+      secureAction = class org.eclipse.osgi.framework.util.SecureAction@6ee4d9ab
+      equinoxConfig = class org.eclipse.osgi.internal.framework.EquinoxConfiguration@5a5338df
+      logServices = class org.eclipse.osgi.internal.log.EquinoxLogServices@418c5a9c
+      storage = class org.eclipse.osgi.storage.Storage@18e36d14
+      packageAdmin = class org.eclipse.osgi.internal.framework.legacy.PackageAdminImpl@5082d622
+      startLevel = class org.eclipse.osgi.internal.framework.legacy.StartLevelImpl@13d4992d
+      bootDelegation = class java.util.HashSet@302f7971
+      bootDelegationStems = class java.lang.String[12]
+      bootDelegateAll = false
+      isProcessClassRecursionSupportedByAll = false
+      eventPublisher = class org.eclipse.osgi.internal.framework.EquinoxEventPublisher@75d2da2d
+      monitor = class java.lang.Object@4278284b
+      serviceRegistry = null
+      contextFinder = class org.eclipse.osgi.internal.framework.ContextFinder@6989da5e
+      signedContentFactory = class org.osgi.util.tracker.ServiceTracker@9573584
+      executor = class java.util.concurrent.ScheduledThreadPoolExecutor@3370f42
+      storageSaver = class org.eclipse.osgi.internal.framework.StorageSaver@6057aebb
+    debug = class org.eclipse.osgi.internal.debug.Debug@68f4865
+      ECLIPSE_OSGI = "org.eclipse.osgi"
+      OPTION_DEBUG_GENERAL = "org.eclipse.osgi/debug"
+      OPTION_DEBUG_BUNDLE_TIME = "org.eclipse.osgi/debug/bundleTime"
+      OPTION_DEBUG_LOADER = "org.eclipse.osgi/debug/loader"
+      OPTION_DEBUG_STORAGE = "org.eclipse.osgi/debug/storage"
+      OPTION_DEBUG_EVENTS = "org.eclipse.osgi/debug/events"
+      OPTION_DEBUG_SERVICES = "org.eclipse.osgi/debug/services"
+      OPTION_DEBUG_HOOKS = "org.eclipse.osgi/debug/hooks"
+      OPTION_DEBUG_MANIFEST = "org.eclipse.osgi/debug/manifest"
+      OPTION_DEBUG_FILTER = "org.eclipse.osgi/debug/filter"
+      OPTION_DEBUG_SECURITY = "org.eclipse.osgi/debug/security"
+      OPTION_DEBUG_STARTLEVEL = "org.eclipse.osgi/debug/startlevel"
+      OPTION_DEBUG_PACKAGEADMIN = "org.eclipse.osgi/debug/packageadmin"
+      OPTION_DEBUG_PACKAGEADMIN_TIMING = "org.eclipse.osgi/debug/packageadmin/timing"
+      OPTION_MONITOR_ACTIVATION = "org.eclipse.osgi/monitor/activation"
+      OPTION_MONITOR_LAZY = "org.eclipse.osgi/monitor/lazy"
+      OPTION_DEBUG_MESSAGE_BUNDLES = "org.eclipse.osgi/debug/messageBundles"
+      OPTION_DEBUG_LOCATION = "org.eclipse.osgi/debug/location"
+      OPTION_CACHED_MANIFEST = "org.eclipse.osgi/debug/cachedmanifest"
+      OPTION_DEBUG_SYSTEM_BUNDLE = "org.eclipse.osgi/debug/systemBundle"
+      OPTION_DEBUG_BUNDLE_FILE = "org.eclipse.osgi/debug/bundleFile"
+      DEBUG_GENERAL = false
+      DEBUG_BUNDLE_TIME = false
+      DEBUG_LOADER = false
+      DEBUG_STORAGE = false
+      DEBUG_EVENTS = false
+      DEBUG_SERVICES = false
+      DEBUG_HOOKS = false
+      DEBUG_MANIFEST = false
+      DEBUG_FILTER = false
+      DEBUG_SECURITY = false
+      DEBUG_STARTLEVEL = false
+      DEBUG_PACKAGEADMIN = false
+      DEBUG_PACKAGEADMIN_TIMING = false
+      DEBUG_MESSAGE_BUNDLES = false
+      MONITOR_ACTIVATION = false
+      DEBUG_LOCATION = false
+      DEBUG_CACHED_MANIFEST = false
+      DEBUG_SYSTEM_BUNDLE = false
+      DEBUG_BUNDLE_FILE = false
+      out = class com.ibm.ws.logging.internal.impl.BaseTraceService$TeePrintStream@63eef88a
+    servicesInUse = null
+    activator = null
+    contextLock = class java.lang.Object@4816278d
+  frameworkStartLevel = class org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel@3e6f3f28
+    USE_BEGINNING_START_LEVEL = -2147483648
+    FRAMEWORK_STARTLEVEL = 1
+    MODULE_STARTLEVEL = 2
+    activeStartLevel = class java.util.concurrent.atomic.AtomicInteger@727eb8cb
+      serialVersionUID = 6214790243416807050
+      U = class jdk.internal.misc.Unsafe@732d0d24
+      VALUE = 12
+      value = 0
+      serialVersionUID = -8742448824652078965
+    eventManagerLock = class java.lang.Object@39d9314d
+    startLevelThread = class org.eclipse.osgi.framework.eventmgr.EventManager@b978d10
+      DEBUG = false
+      thread = null
+      closed = true
+      threadName = "Start Level: Equinox Container: 0800638b-aac3-4e95-82ca-f66a2a59eca2"
+      threadGroup = null
+    frameworkStartLevelLock = class java.lang.Object@5b7a8434
+    debugStartLevel = false
+    this$0 = class org.eclipse.osgi.container.ModuleContainer@6e509ffa
+      secureAction = class org.eclipse.osgi.framework.util.SecureAction@53251a66
+      locationLocks = class org.eclipse.osgi.internal.container.LockSet@6853425f
+      nameLocks = class org.eclipse.osgi.internal.container.LockSet@352c1b98
+      frameworkWiring = class org.eclipse.osgi.container.ModuleContainer$ContainerWiring@21129f1f
+      frameworkStartLevel = class org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel@3e6f3f28
+      moduleDatabase = class org.eclipse.osgi.container.ModuleDatabase@5a9f4771
+      adaptor = class org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor@282cb7c7
+      moduleResolver = class org.eclipse.osgi.container.ModuleResolver@7d898981
+      refreshingSystemModule = class java.util.concurrent.atomic.AtomicReference@48d61b48
+      moduleLockTimeout = 30
+      autoStartOnResolve = false
+      DEBUG_MONITOR_LAZY = false
+      _resolutionLock = class org.eclipse.osgi.container.ModuleContainer$ResolutionLock@258d79be
+      _bundleStateLock = class java.util.concurrent.locks.ReentrantLock@14f9390f
+  serialVersionUID = 5560492706102011330
+
+Dump of objectArray[0]
+Object type = java.lang.String
+  String value = "com.ibm.ws.kernel.instrument.serialfilter.serverconfig;version="[1,1.0.100)""
+

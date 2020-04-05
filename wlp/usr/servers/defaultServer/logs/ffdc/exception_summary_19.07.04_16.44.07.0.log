@@ -1,0 +1,42 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0     16   04/07/19 16:44:07:726 COT   04/07/19 16:44:09:528 COT java.lang.NoClassDefFoundError com.ibm.ws.injectionengine.InjectionProcessorManager.getAllDeclaredFields 249
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.1.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.3.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.6.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.8.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.07.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.09.0.log
+     1      1   04/07/19 16:44:07:903 COT   04/07/19 16:44:07:903 COT com.ibm.ejs.container.EJBConfigurationException com.ibm.ws.ejbcontainer.osgi.internal.ModuleInitDataAdapter 123
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.07.1.log
+     2     15   04/07/19 16:44:08:054 COT   04/07/19 16:44:09:529 COT java.lang.NoClassDefFoundError com.ibm.wsspi.injectionengine.MethodMap.getAllDeclaredMethods 106
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.2.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.9.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.5.log
+     3      1   04/07/19 16:44:08:275 COT   04/07/19 16:44:08:275 COT com.ibm.wsspi.adaptable.module.UnableToAdaptException com.ibm.ws.ejbcontainer.osgi.internal.EJBContainerImpl 155
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.4.log
+     4      1   04/07/19 16:44:08:621 COT   04/07/19 16:44:08:621 COT com.ibm.ws.container.service.metadata.MetaDataException com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase 372
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.04_16.44.08.7.log
+     5     12   05/07/19 01:57:24:243 COT   05/07/19 02:38:25:770 COT java.lang.IndexOutOfBoundsException com.ibm.ejs.container.BusinessExceptionMappingStrategy.setUncheckedException 506
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_02.01.39.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_02.01.49.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_01.57.24.0.log
+     6      1   05/07/19 01:59:27:008 COT   05/07/19 01:59:27:008 COT java.lang.NumberFormatException com.ibm.ejs.container.BusinessExceptionMappingStrategy.setUncheckedException 506
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_01.59.27.0.log
+     7     14   05/07/19 04:08:19:796 COT   05/07/19 11:36:08:443 COT org.jboss.weld.exceptions.DeploymentException com.ibm.ws.container.service.state.internal.ApplicationStateManager 31
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_04.08.19.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.10.33.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.10.43.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.09.10.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.22.23.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.30.38.0.log
+     8     13   05/07/19 04:08:19:831 COT   05/07/19 11:31:17:626 COT com.ibm.ws.container.service.state.StateChangeException com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase 385
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_04.08.19.1.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.10.34.0.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.10.43.1.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.09.10.1.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.22.23.1.log
+                                                                            - D:\devel\tools\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_19.07.05_11.30.38.1.log
+------+------+---------------------------+---------------------------+---------------------------

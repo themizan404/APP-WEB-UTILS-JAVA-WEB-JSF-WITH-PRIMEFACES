@@ -1,0 +1,59 @@
+------Start of DE processing------ = [03/07/19 03:42:26:064 COT]
+Exception = java.lang.IllegalStateException
+Source = com.ibm.ws.microprofile.openapi.impl.OpenAPIUIBundlesUpdater
+probeid = 338
+Stack Dump = java.lang.IllegalStateException: BundleContext is no longer valid
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.checkValid(BundleContextImpl.java:1024)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getServiceReferences(BundleContextImpl.java:570)
+	at com.ibm.ws.microprofile.openapi.impl.OpenAPIUIBundlesUpdater.waitForBundlesToStart(OpenAPIUIBundlesUpdater.java:331)
+	at com.ibm.ws.microprofile.openapi.impl.OpenAPIUIBundlesUpdater.updateResources(OpenAPIUIBundlesUpdater.java:69)
+	at com.ibm.ws.microprofile.openapi.impl.CustomCSSWABUpdater.restoreDefaults(CustomCSSWABUpdater.java:46)
+	at com.ibm.ws.microprofile.openapi.impl.CustomCSSProcessor$1.run(CustomCSSProcessor.java:236)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Dump of callerThis
+null
+Dump of objectArray[0]
+Object type = java.util.HashSet
+  serialVersionUID = -5024744406713321676
+  map = class java.util.HashMap@3ff1d97
+    serialVersionUID = 362498820763181265
+    DEFAULT_INITIAL_CAPACITY = 16
+    MAXIMUM_CAPACITY = 1073741824
+    DEFAULT_LOAD_FACTOR = 0.75
+    TREEIFY_THRESHOLD = 8
+    UNTREEIFY_THRESHOLD = 6
+    MIN_TREEIFY_CAPACITY = 64
+    table = class java.util.HashMap$Node[16]
+      Node[0] = null
+      Node[1] = null
+      Node[2] = null
+      Node[3] = null
+      Node[4] = null
+      Node[5] = null
+      Node[6] = null
+      Node[7] = null
+      Node[8] = null
+      Node[9] = null
+      Node[10] = null
+      Node[11] = null
+      Node[12] = null
+      Node[13] = null
+      Node[14] = class java.util.HashMap$Node@772341cd
+      Node[15] = null
+    entrySet = null
+    size = 1
+    modCount = 1
+    threshold = 12
+    loadFactor = 0.75
+    keySet = class java.util.HashMap$KeySet@c4be676
+      this$0 = class java.util.HashMap@3ff1d97
+      MAX_ARRAY_SIZE = 2147483639
+    values = null
+  PRESENT = class java.lang.Object@575c2e9e
+  MAX_ARRAY_SIZE = 2147483639
+

@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body style="margin:0px;">
+	    <p:breadCrumb>
+		    <p:menuitem value="Index" url="http://localhost:9080/AppWebCRUD/faces/vista/index.xhtml" />
+		    <p:menuitem value="Crear" url="http://localhost:9080/AppWebCRUD/faces/vista/crear.xhtml" />
+		    <p:menuitem value="Administrar" url="http://localhost:9080/AppWebCRUD/faces/vista/index.xhtml" />
+		</p:breadCrumb>
+		
+			<p:dataTable id="data" var="item" value="#{listarUsuario.listaUsuarios}" rowKey="#{item.id}" emptyMessage="No hay usuarios disponibles">
+				<p:column headerText="Nombre">
+					<h:outputText value="#{item.nombre}"/>
+				</p:column>
+				
+				<p:column headerText="Apellido">
+					<h:outputText value="#{item.apellido}"/>
+				</p:column>
+				
+				<p:column headerText="Edad">
+					<h:outputText value="#{item.edad}"/>
+				</p:column>
+				
+				<p:column headerText="Pais">
+					<h:outputText value="#{item.pais}"/>
+				</p:column>
+			
+				<p:column headerText="Dni">
+					<h:outputText value="#{item.dni}"/>
+				</p:column>
+				
+				<p:column headerText="Actions" style="text-align:center;">
+					<p:button icon="ui-icon-delete" value="E" outcome="eliminar">
+						<f:param name="userId" value="#{item.id}"/>
+					</p:button>
+					<p:spacer width="10"/>
+					<p:button icon="ui-icon-update" value="A" outcome="actualizar">
+						<f:param name="userId" value="#{item.id}"/>
+					</p:button>
+				</p:column>
+				
+			</p:dataTable>
+			
+    </h:body>
+</html>

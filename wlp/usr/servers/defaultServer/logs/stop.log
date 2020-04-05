@@ -1,0 +1,13 @@
+
+arg0=--batch-file=--stop
+arg1=stop
+arg2=defaultServer
+exit=21
+
+                 Java home:  C:\Program Files\Java\jre1.8.0_211
+              Install root:  D:/devel/tools/wlp/
+          System libraries:  D:/devel/tools/wlp/lib/
+                 User root:  D:/devel/tools/wlp/usr/
+                    Config:  D:/devel/tools/wlp/usr/servers/defaultServer/
+                    Output:  D:/devel/tools/wlp/usr/servers/defaultServer/
+

@@ -1,0 +1,1104 @@
+------Start of DE processing------ = [30/05/19 15:04:22:018 PET]
+Exception = java.security.PrivilegedActionException
+Source = com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl
+probeid = 115
+Stack Dump = java.security.PrivilegedActionException: com.ibm.wsspi.injectionengine.InjectionException: CWNEN0030E: La fábrica java:comp/env/security.admin.organization.OrganizationListView/tableRows ha encontrado un problema al obtener el objeto de enlace The EJB reference in the security.war module of the security application could not be resolved; nested exception is: com.ibm.ejs.container.EJBNotFoundException: EJB with interface java.util.List not present in application security. de la instancia del objeto. El mensaje de la excepción es: {2}
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:555)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.callInject(WebSphereInjectionServicesImpl.java:129)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.injectJavaEEResources(WebSphereInjectionServicesImpl.java:111)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.aroundInject(WebSphereInjectionServicesImpl.java:316)
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:46)
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:71)
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:117)
+	at org.jboss.weld.bean.ManagedBean.create(ManagedBean.java:159)
+	at org.jboss.weld.util.bean.IsolatedForwardingBean.create(IsolatedForwardingBean.java:45)
+	at org.apache.myfaces.cdi.view.ViewScopeContextualStorage.createContextualInstance(ViewScopeContextualStorage.java:91)
+	at org.apache.myfaces.cdi.view.ViewScopeContextImpl.get(ViewScopeContextImpl.java:185)
+	at org.jboss.weld.contexts.PassivatingContextWrapper$AbstractPassivatingContextWrapper.get(PassivatingContextWrapper.java:84)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy.get(ContextualInstanceStrategy.java:100)
+	at org.jboss.weld.bean.ContextualInstance.get(ContextualInstance.java:50)
+	at org.jboss.weld.manager.BeanManagerImpl.getReference(BeanManagerImpl.java:694)
+	at org.jboss.weld.module.web.el.AbstractWeldELResolver.lookup(AbstractWeldELResolver.java:107)
+	at org.jboss.weld.module.web.el.AbstractWeldELResolver.getValue(AbstractWeldELResolver.java:90)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:66)
+	at org.apache.myfaces.el.unified.resolver.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:179)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:80)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:135)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:184)
+	at org.apache.myfaces.view.facelets.el.ContextAwareTagValueExpression.getValue(ContextAwareTagValueExpression.java:93)
+	at javax.faces.component._DeltaStateHelper.eval(_DeltaStateHelper.java:356)
+	at javax.faces.component.UIData.getValue(UIData.java:2229)
+	at org.primefaces.component.api.UIData.getDataModel(UIData.java:792)
+	at org.primefaces.component.api.UIData.setRowModel(UIData.java:587)
+	at org.primefaces.component.api.UIData.setRowIndexWithoutRowStatePreserved(UIData.java:580)
+	at org.primefaces.component.api.UIData.setRowIndex(UIData.java:640)
+	at javax.faces.component.UIData.encodeEnd(UIData.java:1829)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:555)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:551)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:551)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:551)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.renderView(FaceletViewDeclarationLanguage.java:1897)
+	at org.apache.myfaces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:315)
+	at javax.faces.application.ViewHandlerWrapper.renderView(ViewHandlerWrapper.java:73)
+	at org.apache.myfaces.lifecycle.RenderResponseExecutor.execute(RenderResponseExecutor.java:117)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:266)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:206)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.invokeTarget(WebAppFilterChain.java:182)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter(WebAppFilterChain.java:93)
+	at com.ibm.ws.security.jaspi.JaspiServletFilter.doFilter(JaspiServletFilter.java:56)
+	at com.ibm.ws.webcontainer.filter.FilterInstanceWrapper.doFilter(FilterInstanceWrapper.java:201)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter(WebAppFilterChain.java:90)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.doFilter(WebAppFilterManager.java:996)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1134)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4968)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:992)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1047)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:417)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:376)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:532)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:466)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:331)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:302)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:165)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:74)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:503)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:573)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:954)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1043)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: com.ibm.wsspi.injectionengine.InjectionException: CWNEN0030E: La fábrica java:comp/env/security.admin.organization.OrganizationListView/tableRows ha encontrado un problema al obtener el objeto de enlace The EJB reference in the security.war module of the security application could not be resolved; nested exception is: com.ibm.ejs.container.EJBNotFoundException: EJB with interface java.util.List not present in application security. de la instancia del objeto. El mensaje de la excepción es: {2}
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1454)
+	at com.ibm.ws.ejb.injection.processor.EJBInjectionBinding.getInjectionObject(EJBInjectionBinding.java:1046)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1368)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:104)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:197)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:149)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.access$000(WebSphereInjectionServicesImpl.java:73)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:133)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:129)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:551)
+	... 70 more
+Caused by: javax.ejb.EJBException: The EJB reference in the security.war module of the security application could not be resolved; nested exception is: com.ibm.ejs.container.EJBNotFoundException: EJB with interface java.util.List not present in application security.
+	at com.ibm.ws.ejbcontainer.injection.factory.EJBLinkObjectFactory.getObjectInstance(EJBLinkObjectFactory.java:126)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObjectInstance(InjectionBinding.java:1552)
+	at com.ibm.ws.ejb.injection.processor.EJBInjectionBinding.getInjectionObjectInstance(EJBInjectionBinding.java:1108)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1428)
+	... 79 more
+Caused by: com.ibm.ejs.container.EJBNotFoundException: EJB with interface java.util.List not present in application security.
+	at com.ibm.ejs.container.HomeOfHomes.getHomeByInterface(HomeOfHomes.java:901)
+	at com.ibm.ws.ejbcontainer.injection.factory.EJBLinkObjectFactory.getObjectInstance(EJBLinkObjectFactory.java:219)
+	at com.ibm.ws.ejbcontainer.injection.factory.EJBLinkObjectFactory.getObjectInstance(EJBLinkObjectFactory.java:106)
+	... 82 more
+
+Dump of callerThis
+Object type = com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl
+  tc = class com.ibm.websphere.ras.TraceComponent@1f57b4bf
+    strings[0] = "TraceComponent[com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl,class com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl,[JCDI],com.ibm.ws.cdi.impl.resources.CDI,null]"
+  ANNOTATIONS_KNOWN_TO_WELD = class java.util.HashSet@680fee15
+    serialVersionUID = -5024744406713321676
+    map = class java.util.HashMap@25eb1030
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 1
+      modCount = 1
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    PRESENT = class java.lang.Object@2f895ccc
+    MAX_ARRAY_SIZE = 2147483639
+  referenceContextMap = class java.util.HashMap@6530e37a
+    serialVersionUID = 362498820763181265
+    DEFAULT_INITIAL_CAPACITY = 16
+    MAXIMUM_CAPACITY = 1073741824
+    DEFAULT_LOAD_FACTOR = 0.75
+    TREEIFY_THRESHOLD = 8
+    UNTREEIFY_THRESHOLD = 6
+    MIN_TREEIFY_CAPACITY = 64
+    table = class java.util.HashMap$Node[128]
+      Node[0] = class java.util.HashMap$Node@670bff3a
+      Node[1] = null
+      Node[2] = class java.util.HashMap$Node@34b3a0b4
+      Node[3] = null
+      Node[4] = null
+      Node[5] = null
+      Node[6] = null
+      Node[7] = class java.util.HashMap$Node@702b358d
+      Node[8] = null
+      Node[9] = null
+      Node[10] = class java.util.HashMap$Node@5f9f643d
+      Node[11] = null
+      Node[12] = class java.util.HashMap$Node@6755b2db
+      Node[13] = null
+      Node[14] = class java.util.HashMap$Node@4e4a0885
+      Node[15] = null
+      Node[16] = class java.util.HashMap$Node@6764cb9c
+      Node[17] = null
+      Node[18] = null
+      Node[19] = null
+      Node[20] = null
+      Node[21] = class java.util.HashMap$Node@437ef5c1
+      Node[22] = class java.util.HashMap$Node@977441f
+      Node[23] = class java.util.HashMap$Node@17e76b94
+      Node[24] = class java.util.HashMap$Node@569e6adf
+      Node[25] = class java.util.HashMap$Node@627a5d30
+      Node[26] = null
+      Node[27] = null
+      Node[28] = null
+      Node[29] = class java.util.HashMap$Node@519eaadc
+      Node[30] = null
+      Node[31] = class java.util.HashMap$Node@7d89d0b0
+      Node[32] = null
+      Node[33] = null
+      Node[34] = null
+      Node[35] = null
+      Node[36] = class java.util.HashMap$Node@5864954c
+      Node[37] = class java.util.HashMap$Node@68c7c0ad
+      Node[38] = null
+      Node[39] = null
+      Node[40] = null
+      Node[41] = null
+      Node[42] = class java.util.HashMap$Node@4cab5f23
+      Node[43] = class java.util.HashMap$Node@7f140a56
+      Node[44] = null
+      Node[45] = null
+      Node[46] = class java.util.HashMap$Node@3262e0d
+      Node[47] = class java.util.HashMap$Node@5532446c
+      Node[48] = null
+      Node[49] = null
+      Node[50] = class java.util.HashMap$Node@43764bae
+      Node[51] = null
+      Node[52] = null
+      Node[53] = null
+      Node[54] = null
+      Node[55] = null
+      Node[56] = null
+      Node[57] = null
+      Node[58] = class java.util.HashMap$Node@1c6faf2c
+      Node[59] = null
+      Node[60] = null
+      Node[61] = null
+      Node[62] = null
+      Node[63] = null
+      Node[64] = class java.util.HashMap$Node@2e0bacea
+      Node[65] = null
+      Node[66] = class java.util.HashMap$Node@695d8c63
+      Node[67] = null
+      Node[68] = null
+      Node[69] = null
+      Node[70] = class java.util.HashMap$Node@180781dd
+      Node[71] = null
+      Node[72] = null
+      Node[73] = null
+      Node[74] = class java.util.HashMap$Node@79f04b3e
+      Node[75] = null
+      Node[76] = null
+      Node[77] = class java.util.HashMap$Node@a6fd416
+      Node[78] = null
+      Node[79] = null
+      Node[80] = null
+      Node[81] = null
+      Node[82] = class java.util.HashMap$Node@f546fac
+      Node[83] = class java.util.HashMap$Node@2bf91ef2
+      Node[84] = class java.util.HashMap$Node@50ab0908
+      Node[85] = class java.util.HashMap$Node@2490b86f
+      Node[86] = null
+      Node[87] = null
+      Node[88] = null
+      Node[89] = null
+      Node[90] = null
+      Node[91] = class java.util.HashMap$Node@8959a5e
+      Node[92] = null
+      Node[93] = null
+      Node[94] = class java.util.HashMap$Node@6b781b30
+      Node[95] = class java.util.HashMap$Node@6313ac1e
+      Node[96] = class java.util.HashMap$Node@42e133d3
+      Node[97] = class java.util.HashMap$Node@660206bb
+      Node[98] = null
+      Node[99] = null
+      Node[100] = null
+      Node[101] = null
+      Node[102] = class java.util.HashMap$Node@4d8830d0
+      Node[103] = class java.util.HashMap$Node@33051623
+      Node[104] = null
+      Node[105] = null
+      Node[106] = null
+      Node[107] = null
+      Node[108] = class java.util.HashMap$Node@78b1d43b
+      Node[109] = null
+      Node[110] = class java.util.HashMap$Node@ef03248
+      Node[111] = null
+      Node[112] = null
+      Node[113] = class java.util.HashMap$Node@2f28df6
+      Node[114] = null
+      Node[115] = null
+      Node[116] = class java.util.HashMap$Node@19dd3785
+      Node[117] = class java.util.HashMap$Node@6f3b3889
+      Node[118] = null
+      Node[119] = class java.util.HashMap$Node@60d62554
+      Node[120] = class java.util.HashMap$Node@76dd9985
+      Node[121] = class java.util.HashMap$Node@6cce9c4
+      Node[122] = null
+      Node[123] = null
+      Node[124] = class java.util.HashMap$Node@308566e4
+      Node[125] = null
+      Node[126] = class java.util.HashMap$Node@61280925
+      Node[127] = null
+    entrySet = null
+    size = 61
+    modCount = 61
+    threshold = 96
+    loadFactor = 0.75
+    keySet = null
+    values = null
+  referenceContexts = class java.util.HashSet@45111f8d
+    serialVersionUID = -5024744406713321676
+    map = class java.util.HashMap@691e4ca2
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 1
+      modCount = 1
+      threshold = 12
+      loadFactor = 0.75
+      keySet = class java.util.HashMap$KeySet@1a40f14d
+      values = null
+    PRESENT = class java.lang.Object@2f895ccc
+    MAX_ARRAY_SIZE = 2147483639
+  injectionTargetListeners = class java.util.concurrent.ConcurrentHashMap@504a33c7
+    serialVersionUID = 7249069246763182397
+    MAXIMUM_CAPACITY = 1073741824
+    DEFAULT_CAPACITY = 16
+    MAX_ARRAY_SIZE = 2147483639
+    DEFAULT_CONCURRENCY_LEVEL = 16
+    LOAD_FACTOR = 0.75
+    TREEIFY_THRESHOLD = 8
+    UNTREEIFY_THRESHOLD = 6
+    MIN_TREEIFY_CAPACITY = 64
+    MIN_TRANSFER_STRIDE = 16
+    RESIZE_STAMP_BITS = 16
+    MAX_RESIZERS = 65535
+    RESIZE_STAMP_SHIFT = 16
+    MOVED = -1
+    TREEBIN = -2
+    RESERVED = -3
+    HASH_BITS = 2147483647
+    NCPU = 4
+    serialPersistentFields = class java.io.ObjectStreamField[3]
+      ObjectStreamField[0] = class java.io.ObjectStreamField@168b8505
+      ObjectStreamField[1] = class java.io.ObjectStreamField@5a7be416
+      ObjectStreamField[2] = class java.io.ObjectStreamField@aee8f79
+    table = class java.util.concurrent.ConcurrentHashMap$Node[16]
+      Node[0] = null
+      Node[1] = null
+      Node[2] = null
+      Node[3] = null
+      Node[4] = null
+      Node[5] = null
+      Node[6] = null
+      Node[7] = null
+      Node[8] = null
+      Node[9] = null
+      Node[10] = null
+      Node[11] = null
+      Node[12] = null
+      Node[13] = null
+      Node[14] = null
+      Node[15] = null
+    nextTable = null
+    baseCount = 0
+    sizeCtl = 12
+    transferIndex = 0
+    cellsBusy = 0
+    counterCells = null
+    keySet = null
+    values = null
+    entrySet = null
+    U = class jdk.internal.misc.Unsafe@69c4fdeb
+      Failed to resolve fields for jdk.internal.misc.Unsafe = "java.lang.reflect.InaccessibleObjectException: Unable to make field private static final jdk.internal.misc.Unsafe jdk.internal.misc.Unsafe.theUnsafe accessible: module java.base does not "opens jdk.internal.misc" to unnamed module @4c70fda8
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:341)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:281)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:176)
+	at java.base/java.lang.reflect.AccessibleObject.setAccessible(AccessibleObject.java:124)
+	at com.ibm.ws.logging.internal.impl.IntrospectionLevelMember$2.run(IntrospectionLevelMember.java:316)
+	at com.ibm.ws.logging.internal.impl.IntrospectionLevelMember$2.run(IntrospectionLevelMember.java:310)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:310)
+	at com.ibm.ws.logging.internal.impl.IntrospectionLevelMember.getFields(IntrospectionLevelMember.java:310)
+	at com.ibm.ws.logging.internal.impl.IntrospectionLevelMember.introspectViaReflection(IntrospectionLevelMember.java:199)
+	at com.ibm.ws.logging.internal.impl.IntrospectionLevelMember.getChildren(IntrospectionLevelMember.java:163)
+	at com.ibm.ws.logging.internal.impl.IntrospectionLevel.getNextLevel(IntrospectionLevel.java:100)
+	at com.ibm.ws.logging.internal.impl.IncidentStreamImpl.introspect(IncidentStreamImpl.java:437)
+	at com.ibm.ws.logging.internal.impl.IncidentStreamImpl.introspectAndWrite(IncidentStreamImpl.java:129)
+	at com.ibm.ws.logging.internal.impl.IncidentStreamImpl.introspectAndWriteLine(IncidentStreamImpl.java:164)
+	at com.ibm.ws.logging.internal.impl.IncidentLogger.logIncident(IncidentLogger.java:97)
+	at com.ibm.ws.logging.internal.impl.IncidentLogger.logIncident(IncidentLogger.java:35)
+	at com.ibm.ws.logging.internal.impl.IncidentImpl.log(IncidentImpl.java:249)
+	at com.ibm.ws.logging.internal.impl.BaseFFDCService.log(BaseFFDCService.java:239)
+	at com.ibm.ws.logging.internal.impl.BaseFFDCService.processException(BaseFFDCService.java:216)
+	at com.ibm.ws.ffdc.FFDCFilter.processException(FFDCFilter.java:94)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.injectJavaEEResources(WebSphereInjectionServicesImpl.java:115)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.aroundInject(WebSphereInjectionServicesImpl.java:316)
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:46)
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:71)
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:117)
+	at org.jboss.weld.bean.ManagedBean.create(ManagedBean.java:159)
+	at org.jboss.weld.util.bean.IsolatedForwardingBean.create(IsolatedForwardingBean.java:45)
+	at org.apache.myfaces.cdi.view.ViewScopeContextualStorage.createContextualInstance(ViewScopeContextualStorage.java:91)
+	at org.apache.myfaces.cdi.view.ViewScopeContextImpl.get(ViewScopeContextImpl.java:185)
+	at org.jboss.weld.contexts.PassivatingContextWrapper$AbstractPassivatingContextWrapper.get(PassivatingContextWrapper.java:84)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy.get(ContextualInstanceStrategy.java:100)
+	at org.jboss.weld.bean.ContextualInstance.get(ContextualInstance.java:50)
+	at org.jboss.weld.manager.BeanManagerImpl.getReference(BeanManagerImpl.java:694)
+	at org.jboss.weld.module.web.el.AbstractWeldELResolver.lookup(AbstractWeldELResolver.java:107)
+	at org.jboss.weld.module.web.el.AbstractWeldELResolver.getValue(AbstractWeldELResolver.java:90)
+	at javax.el.CompositeELResolver.getValue(CompositeELResolver.java:66)
+	at org.apache.myfaces.el.unified.resolver.FacesCompositeELResolver.getValue(FacesCompositeELResolver.java:179)
+	at org.apache.el.parser.AstIdentifier.getValue(AstIdentifier.java:80)
+	at org.apache.el.parser.AstValue.getValue(AstValue.java:135)
+	at org.apache.el.ValueExpressionImpl.getValue(ValueExpressionImpl.java:184)
+	at org.apache.myfaces.view.facelets.el.ContextAwareTagValueExpression.getValue(ContextAwareTagValueExpression.java:93)
+	at javax.faces.component._DeltaStateHelper.eval(_DeltaStateHelper.java:356)
+	at javax.faces.component.UIData.getValue(UIData.java:2229)
+	at org.primefaces.component.api.UIData.getDataModel(UIData.java:792)
+	at org.primefaces.component.api.UIData.setRowModel(UIData.java:587)
+	at org.primefaces.component.api.UIData.setRowIndexWithoutRowStatePreserved(UIData.java:580)
+	at org.primefaces.component.api.UIData.setRowIndex(UIData.java:640)
+	at javax.faces.component.UIData.encodeEnd(UIData.java:1829)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:555)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:551)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:551)
+	at javax.faces.component.UIComponentBase.encodeAll(UIComponentBase.java:551)
+	at org.apache.myfaces.view.facelets.FaceletViewDeclarationLanguage.renderView(FaceletViewDeclarationLanguage.java:1897)
+	at org.apache.myfaces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:315)
+	at javax.faces.application.ViewHandlerWrapper.renderView(ViewHandlerWrapper.java:73)
+	at org.apache.myfaces.lifecycle.RenderResponseExecutor.execute(RenderResponseExecutor.java:117)
+	at org.apache.myfaces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:266)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:206)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.invokeTarget(WebAppFilterChain.java:182)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter(WebAppFilterChain.java:93)
+	at com.ibm.ws.security.jaspi.JaspiServletFilter.doFilter(JaspiServletFilter.java:56)
+	at com.ibm.ws.webcontainer.filter.FilterInstanceWrapper.doFilter(FilterInstanceWrapper.java:201)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterChain.doFilter(WebAppFilterChain.java:90)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.doFilter(WebAppFilterManager.java:996)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1134)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4968)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:992)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1047)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:417)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:376)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:532)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:466)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:331)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:302)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:165)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:74)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:503)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:573)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:954)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1043)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+"
+    SIZECTL = 20
+    TRANSFERINDEX = 32
+    BASECOUNT = 24
+    CELLSBUSY = 36
+    CELLVALUE = 144
+    ABASE = 16
+    ASHIFT = 2
+    keySet = null
+    values = null
+  deployment = class com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl@4722009d
+    id = "security"
+    deploymentDBAs = class java.util.HashMap@43f87299
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[32]
+      entrySet = null
+      size = 23
+      modCount = 23
+      threshold = 24
+      loadFactor = 0.75
+      keySet = null
+      values = class java.util.HashMap$Values@213a9b56
+    applicationBDAs = class java.util.HashSet@77f474b7
+      serialVersionUID = -5024744406713321676
+      map = class java.util.HashMap@2b22d681
+      PRESENT = class java.lang.Object@2f895ccc
+      MAX_ARRAY_SIZE = 2147483639
+    extensionBDAs = class java.util.HashMap@6c144db7
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[32]
+      entrySet = null
+      size = 13
+      modCount = 13
+      threshold = 24
+      loadFactor = 0.75
+      keySet = null
+      values = class java.util.HashMap$Values@18e99533
+    orderedBDAs = class java.util.ArrayList@2e467fee
+      serialVersionUID = 8683452581122892189
+      DEFAULT_CAPACITY = 10
+      EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = class java.lang.Object[0]
+      elementData = class java.lang.Object[20]
+      size = 20
+      MAX_ARRAY_SIZE = 2147483639
+      modCount = 2
+      MAX_ARRAY_SIZE = 2147483639
+    bootstrap = class org.jboss.weld.bootstrap.WeldBootstrap@2e2aac05
+      weldStartup = null
+      weldRuntime = class org.jboss.weld.bootstrap.WeldRuntime@6c36b4e7
+      beansXmlValidator = null
+    classloader = class com.ibm.ws.classloading.internal.AppClassLoader@43771b58
+      tc = class com.ibm.websphere.ras.TraceComponent@32e7aa64
+      PARENT_FIRST_SEARCH_ORDER = class java.util.Collections$UnmodifiableRandomAccessList@15b20718
+      CLASS_LOADING_TRACE_PREFIX = "com.ibm.ws.class.load."
+      DEFAULT_PACKAGE = "default.package"
+      perPackageClassLoadingTraceComponents = class java.util.concurrent.ConcurrentHashMap@5041fe06
+      config = class com.ibm.ws.classloading.internal.ClassLoaderConfigurationImpl@69fc1873
+      privateLibraries = null
+      delegateLoaders = class com.ibm.ws.classloading.internal.util.CompositeIterable@778a6be0
+      nativeLibraryFiles = class java.util.ArrayList@2e42687a
+      transformers = class java.util.ArrayList@71ac027a
+      apiAccess = class com.ibm.ws.classloading.internal.GatewayClassLoader@2dde30a
+      generator = class com.ibm.ws.classloading.internal.ClassGeneratorManager@33fa9774
+      protectionDomains = class java.util.concurrent.ConcurrentHashMap@781aa3bc
+      parent = class com.ibm.ws.classloading.internal.GatewayClassLoader@2dde30a
+      hook = null
+      serialVersionUID = 7911131531697267209
+      tc = class com.ibm.websphere.ras.TraceComponent@6590d03b
+      smartClassPath = class com.ibm.ws.classloading.internal.ContainerClassLoader$SmartClassPathImpl@5c6b1234
+      nativeLibraryContainers = class java.util.ArrayList@61d7b07b
+      redefiner = class com.ibm.ws.classloading.internal.util.ClassRedefiner@7c3cc552
+      jarProtocol = "wsjar:"
+      mapCreationQueue = class java.util.concurrent.Executors$FinalizableDelegatedExecutorService@7ba728b
+      serialVersionUID = 4390450102868895350
+      serialVersionUID = -7411549862368381758
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@648a359c
+      serialVersionUID = -4868702105808481416
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@3af1199d
+      serialVersionUID = 2596921220292114344
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@74eac6c0
+      pdcache = class java.util.concurrent.ConcurrentHashMap@70f9d1e9
+    extensionClassLoaders = class java.util.HashSet@7a2f34bb
+      serialVersionUID = -5024744406713321676
+      map = class java.util.HashMap@592dc825
+      PRESENT = class java.lang.Object@2f895ccc
+      MAX_ARRAY_SIZE = 2147483639
+    cdiEnabled = true
+    cdiStatusMap = class java.util.HashMap@3498b7bc
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 1
+      modCount = 1
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    classBDAMap = class java.util.concurrent.ConcurrentHashMap@293c17ce
+      serialVersionUID = 7249069246763182397
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_CAPACITY = 16
+      MAX_ARRAY_SIZE = 2147483639
+      DEFAULT_CONCURRENCY_LEVEL = 16
+      LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      MIN_TRANSFER_STRIDE = 16
+      RESIZE_STAMP_BITS = 16
+      MAX_RESIZERS = 65535
+      RESIZE_STAMP_SHIFT = 16
+      MOVED = -1
+      TREEBIN = -2
+      RESERVED = -3
+      HASH_BITS = 2147483647
+      NCPU = 4
+      serialPersistentFields = class java.io.ObjectStreamField[3]
+      table = class java.util.concurrent.ConcurrentHashMap$Node[256]
+      nextTable = null
+      baseCount = 169
+      sizeCtl = 192
+      transferIndex = 0
+      cellsBusy = 0
+      counterCells = null
+      keySet = null
+      values = null
+      entrySet = null
+      U = class jdk.internal.misc.Unsafe@69c4fdeb
+      SIZECTL = 20
+      TRANSFERINDEX = 32
+      BASECOUNT = 24
+      CELLSBUSY = 36
+      CELLVALUE = 144
+      ABASE = 16
+      ASHIFT = 2
+      keySet = null
+      values = null
+    application = class com.ibm.ws.cdi.internal.archive.liberty.ApplicationImpl@520dcc68
+      tc = class com.ibm.websphere.ras.TraceComponent@5381343
+      applicationInfo = class com.ibm.ws.container.service.app.deploy.internal.ApplicationInfoImpl@7cf1dc88
+      earApplicationInfo = null
+      factory = class com.ibm.ws.cdi.internal.archive.liberty.RuntimeFactory@5ca7bb53
+      type = class com.ibm.ws.cdi.internal.interfaces.ApplicationType@6d129b0d
+      moduleArchives = class java.util.HashMap$Values@3a93ec7e
+      libraryArchives = class java.util.HashMap$Values@6e87b612
+      serialVersionUID = -758033848591896501
+    serviceRegistry = class org.jboss.weld.bootstrap.api.helpers.SimpleServiceRegistry@5184b07e
+      services = class java.util.HashMap@3bed00d7
+      bootstrapServices = class java.util.HashSet@7a27cf60
+    extensions = class java.util.HashSet@20d0d8a5
+      serialVersionUID = -5024744406713321676
+      map = class java.util.HashMap@5a5ef13
+      PRESENT = class java.lang.Object@2f895ccc
+      MAX_ARRAY_SIZE = 2147483639
+    injectionServices = class com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl@469a7a82
+    cdiRuntime = class com.ibm.ws.cdi.liberty.CDIRuntimeImpl@659091d2
+      tc = class com.ibm.websphere.ras.TraceComponent@b06d70a
+      metaDataSlotServiceSR = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@7096a24
+      ejbEndpointServiceSR = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@376ab04a
+      classLoadingSRRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@2c0e8728
+      ejbServices = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@599b59d4
+      transactionService = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@150f5089
+      securityServices = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@77055a82
+      extensionsSR = class com.ibm.wsspi.kernel.service.utils.ConcurrentServiceReferenceSet@2feab48d
+      containerFactorySRRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@2cbc1d5d
+      adaptableModuleFactorySRRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@43588b5b
+      injectionEngineServiceRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@1e5418f8
+      scheduledExecutorServiceRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@64609963
+      executorServiceRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@28fa2647
+      managedExecutorServiceRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@2f7f7250
+      containerConfigRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@11d22c9f
+      resourceRefConfigFactoryRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@71991447
+      deferredMetaDataFactoryRef = class com.ibm.wsspi.kernel.service.utils.AtomicServiceReference@8a8cc2d
+      applicationSlot = class com.ibm.ws.runtime.metadata.MetaDataSlotImpl@5c11c29a
+      isClientProcess = false
+      runtimeFactory = class com.ibm.ws.cdi.internal.archive.liberty.RuntimeFactory@5ca7bb53
+      proxyServices = class com.ibm.ws.cdi.liberty.ProxyServicesImpl@6525b7ac
+      serialVersionUID = 3303311990318899787
+      cdiContainer = class com.ibm.ws.cdi.impl.CDIContainerImpl@5211025e
+      serialVersionUID = -3685775177967064433
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@3fcf9104
+    cdi = class com.ibm.ws.cdi.impl.CDIImpl@691b2916
+      cdiService = class com.ibm.ws.cdi.liberty.CDIRuntimeImpl@659091d2
+      serialVersionUID = -7939958868102936626
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@3e56d836
+      knownClassNames = class org.jboss.weld.util.collections.ImmutableTinySet$Tripleton@9591e05
+      instanceCache = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@2c8cf34c
+      lock = class java.lang.Object@7f68e7e9
+      discoveredProviders = null
+      configuredProvider = class com.ibm.ws.cdi.liberty.CDIRuntimeImpl@659091d2
+    serialVersionUID = 8639462765890932626
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@575fd922
+      strings[0] = "TraceComponent[com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl,class com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl,[JCDI],com.ibm.ws.cdi.impl.resources.CDI,null]"
+  serialVersionUID = 2515575801175940133
+
+Dump of objectArray[0]
+Object type = org.jboss.weld.injection.producer.ResourceInjector$1
+  val$instance = class security.admin.organization.OrganizationListView@3f9820e8
+    serialVersionUID = 1
+    organizationApi = null
+    tableRows = null
+  val$ctx = class org.jboss.weld.contexts.CreationalContextImpl@1bf47489
+    serialVersionUID = 7375854583908262422
+    SERIALIZATION_PROXY = class org.jboss.weld.contexts.CreationalContextImpl$SerializationProxy@487b4635
+      serialVersionUID = 5261112077771498097
+    incompleteInstances = class java.util.HashMap@1f90899a
+      serialVersionUID = 362498820763181265
+      DEFAULT_INITIAL_CAPACITY = 16
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      table = class java.util.HashMap$Node[16]
+      entrySet = null
+      size = 1
+      modCount = 1
+      threshold = 12
+      loadFactor = 0.75
+      keySet = null
+      values = null
+    contextual = class org.jboss.weld.bean.ManagedBean@3084643
+    dependentInstances = class java.util.Collections$SynchronizedRandomAccessList@52bc75fc
+      serialVersionUID = 1530674583602358482
+      serialVersionUID = -7754090372962971524
+      list = class java.util.ArrayList@223dd737
+      serialVersionUID = 3053995032091335093
+      c = class java.util.ArrayList@223dd737
+      mutex = class java.util.Collections$SynchronizedRandomAccessList@52bc75fc
+    parentDependentInstances = class java.util.Collections$SynchronizedRandomAccessList@46fd5478
+      serialVersionUID = 1530674583602358482
+      serialVersionUID = -7754090372962971524
+      list = class java.util.ArrayList@cd4bb0a
+      serialVersionUID = 3053995032091335093
+      c = class java.util.ArrayList@cd4bb0a
+      mutex = class java.util.Collections$SynchronizedRandomAccessList@46fd5478
+    parentCreationalContext = class org.jboss.weld.contexts.CreationalContextImpl@54a5e87c
+      serialVersionUID = 7375854583908262422
+      SERIALIZATION_PROXY = class org.jboss.weld.contexts.CreationalContextImpl$SerializationProxy@487b4635
+      incompleteInstances = null
+      contextual = class org.jboss.weld.bean.ManagedBean@3084643
+      dependentInstances = class java.util.Collections$SynchronizedRandomAccessList@46fd5478
+      parentDependentInstances = class java.util.Collections$SynchronizedRandomAccessList@427898ce
+      parentCreationalContext = null
+      resourceReferences = null
+      constructorInterceptionSuppressed = false
+      aroundConstructCallbacks = null
+      aroundConstructInterceptionContext = null
+    resourceReferences = null
+    constructorInterceptionSuppressed = false
+    aroundConstructCallbacks = null
+    aroundConstructInterceptionContext = null
+  val$manager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+    serialVersionUID = 3021562879133838561
+    CREATIONAL_CONTEXT = "creationalContext"
+    services = class org.jboss.weld.bootstrap.api.helpers.SimpleServiceRegistry@2f5beccf
+      services = class java.util.HashMap@64190ea0
+      bootstrapServices = class java.util.HashSet@6dcff014
+    contexts = class java.util.concurrent.ConcurrentHashMap@3cb71201
+      serialVersionUID = 7249069246763182397
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_CAPACITY = 16
+      MAX_ARRAY_SIZE = 2147483639
+      DEFAULT_CONCURRENCY_LEVEL = 16
+      LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      MIN_TRANSFER_STRIDE = 16
+      RESIZE_STAMP_BITS = 16
+      MAX_RESIZERS = 65535
+      RESIZE_STAMP_SHIFT = 16
+      MOVED = -1
+      TREEBIN = -2
+      RESERVED = -3
+      HASH_BITS = 2147483647
+      NCPU = 4
+      serialPersistentFields = class java.io.ObjectStreamField[3]
+      table = class java.util.concurrent.ConcurrentHashMap$Node[16]
+      nextTable = null
+      baseCount = 11
+      sizeCtl = 12
+      transferIndex = 0
+      cellsBusy = 0
+      counterCells = null
+      keySet = null
+      values = null
+      entrySet = null
+      U = class jdk.internal.misc.Unsafe@69c4fdeb
+      SIZECTL = 20
+      TRANSFERINDEX = 32
+      BASECOUNT = 24
+      CELLSBUSY = 36
+      CELLVALUE = 144
+      ABASE = 16
+      ASHIFT = 2
+      keySet = null
+      values = null
+    clientProxyProvider = class org.jboss.weld.bean.proxy.ClientProxyProvider@7fd6056e
+      BEAN_NOT_PROXYABLE_MARKER = class java.lang.Object@40f00870
+      beanTypeClosureProxyPool = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@62a3b421
+      requestedTypeClosureProxyPool = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@369a7bb6
+      contextId = "security"
+      services = class org.jboss.weld.bootstrap.api.helpers.ServiceRegistries$1@1d335a4c
+    enterpriseBeans = class java.util.concurrent.ConcurrentHashMap@6f6bb9f7
+      serialVersionUID = 7249069246763182397
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_CAPACITY = 16
+      MAX_ARRAY_SIZE = 2147483639
+      DEFAULT_CONCURRENCY_LEVEL = 16
+      LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      MIN_TRANSFER_STRIDE = 16
+      RESIZE_STAMP_BITS = 16
+      MAX_RESIZERS = 65535
+      RESIZE_STAMP_SHIFT = 16
+      MOVED = -1
+      TREEBIN = -2
+      RESERVED = -3
+      HASH_BITS = 2147483647
+      NCPU = 4
+      serialPersistentFields = class java.io.ObjectStreamField[3]
+      table = null
+      nextTable = null
+      baseCount = 0
+      sizeCtl = 0
+      transferIndex = 0
+      cellsBusy = 0
+      counterCells = null
+      keySet = null
+      values = null
+      entrySet = null
+      U = class jdk.internal.misc.Unsafe@69c4fdeb
+      SIZECTL = 20
+      TRANSFERINDEX = 32
+      BASECOUNT = 24
+      CELLSBUSY = 36
+      CELLVALUE = 144
+      ABASE = 16
+      ASHIFT = 2
+      keySet = null
+      values = null
+    enabled = class org.jboss.weld.bootstrap.enablement.ModuleEnablement@1fa61d41
+      EMPTY_ENABLEMENT = class org.jboss.weld.bootstrap.enablement.ModuleEnablement@3effb65b
+      interceptors = class org.jboss.weld.util.collections.ImmutableArrayList@16af1171
+      decorators = class java.util.Collections$EmptyList@72f8df41
+      interceptorMap = class java.util.Collections$UnmodifiableMap@7edf9ce1
+      decoratorMap = class java.util.Collections$EmptyMap@3ead62b4
+      globalAlternatives = class java.util.Collections$UnmodifiableMap@7d234654
+      localAlternativeClasses = class java.util.Collections$EmptySet@469b7179
+      localAlternativeStereotypes = class java.util.Collections$EmptySet@469b7179
+      decoratorComparator = class org.jboss.weld.bootstrap.enablement.ModuleEnablement$EnablementComparator@1369e418
+      interceptorComparator = class org.jboss.weld.bootstrap.enablement.ModuleEnablement$EnablementComparator@11d35a00
+    beanResolver = class org.jboss.weld.resolution.TypeSafeBeanResolver@1b0533ae
+      beanManager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+      disambiguatedBeans = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@1ba6963e
+      store = class org.jboss.weld.metadata.cache.MetaAnnotationStore@612cff1
+      beansByType = class org.jboss.weld.resolution.AbstractTypeSafeBeanResolver$1@31489aa9
+      resolved = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@6cc2b300
+      allBeans = class org.jboss.weld.util.collections.Iterables$$Lambda$256/0x0000000801d2f040@43facfc0
+      resolverFunction = class org.jboss.weld.resolution.TypeSafeResolver$ResolvableToBeanCollection@5387ed09
+    decoratorResolver = class org.jboss.weld.resolution.TypeSafeDecoratorResolver@54b7b8d5
+      rules = class org.jboss.weld.resolution.DelegateInjectionPointAssignabilityRules@12ac57e
+      beanManager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+      disambiguatedBeans = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@4f56de45
+      store = class org.jboss.weld.metadata.cache.MetaAnnotationStore@612cff1
+      beansByType = class org.jboss.weld.resolution.AbstractTypeSafeBeanResolver$1@496e8189
+      resolved = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@4b72cc2f
+      allBeans = class org.jboss.weld.util.collections.Iterables$$Lambda$256/0x0000000801d2f040@1ca4e10a
+      resolverFunction = class org.jboss.weld.resolution.TypeSafeResolver$ResolvableToBeanCollection@65f9b02d
+    interceptorResolver = class org.jboss.weld.resolution.TypeSafeInterceptorResolver@662117b5
+      manager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+      resolved = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@1be17266
+      allBeans = class org.jboss.weld.util.collections.Iterables$$Lambda$256/0x0000000801d2f040@88dbe20
+      resolverFunction = class org.jboss.weld.resolution.TypeSafeResolver$ResolvableToBeanCollection@244dcd9f
+    nameBasedResolver = class org.jboss.weld.resolution.NameBasedResolver@49c24225
+      resolvedNames = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@443e224c
+    weldELResolver = class org.jboss.weld.module.web.el.WeldELResolver@7b6880f0
+      beanManager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+      rootNamespace = class org.jboss.weld.util.LazyValueHolder$1@3610d652
+      TYPE = "type"
+      RESOLVABLE_AT_DESIGN_TIME = "resolvableAtDesignTime"
+    accessibleLenientObserverNotifier = class org.jboss.weld.module.jta.TransactionalObserverNotifier@12f0fe58
+      FACTORY = class org.jboss.weld.module.jta.TransactionalObserverNotifier$1@284355a
+      transactionServices = class com.ibm.ws.cdi.impl.weld.TransactionServicesImpl@795a0336
+      contextId = "security"
+      NO_EXCEPTION_MARKER = class java.lang.RuntimeException@7653a668
+      resolver = class org.jboss.weld.resolution.TypeSafeObserverResolver@1d3bc840
+      sharedObjectCache = class org.jboss.weld.resources.SharedObjectCache@20006c1a
+      strict = false
+      currentEventMetadata = class org.jboss.weld.event.CurrentEventMetadata@5ce73a2a
+      eventTypeCheckCache = null
+      asyncEventExecutor = class com.ibm.ws.concurrent.ee.ManagedExecutorServiceImpl@758dc133
+      timerExecutor = class com.ibm.ws.threading.internal.ScheduledExecutorImpl@3b06bd42
+      securityServices = class com.ibm.ws.cdi.impl.DefaultCDI20SecurityService@1e06490c
+      requestContextHolder = class org.jboss.weld.util.LazyValueHolder$1@599f2e18
+    globalLenientObserverNotifier = class org.jboss.weld.module.jta.TransactionalObserverNotifier@7c02df0c
+      FACTORY = class org.jboss.weld.module.jta.TransactionalObserverNotifier$1@284355a
+      transactionServices = class com.ibm.ws.cdi.impl.weld.TransactionServicesImpl@795a0336
+      contextId = "security"
+      NO_EXCEPTION_MARKER = class java.lang.RuntimeException@7653a668
+      resolver = class org.jboss.weld.resolution.TypeSafeObserverResolver@7feafe68
+      sharedObjectCache = class org.jboss.weld.resources.SharedObjectCache@20006c1a
+      strict = false
+      currentEventMetadata = class org.jboss.weld.event.CurrentEventMetadata@5ce73a2a
+      eventTypeCheckCache = null
+      asyncEventExecutor = class com.ibm.ws.concurrent.ee.ManagedExecutorServiceImpl@758dc133
+      timerExecutor = class com.ibm.ws.threading.internal.ScheduledExecutorImpl@3b06bd42
+      securityServices = class com.ibm.ws.cdi.impl.DefaultCDI20SecurityService@1e06490c
+      requestContextHolder = class org.jboss.weld.util.LazyValueHolder$1@3637fd1a
+    globalStrictObserverNotifier = class org.jboss.weld.module.jta.TransactionalObserverNotifier@270a69c3
+      FACTORY = class org.jboss.weld.module.jta.TransactionalObserverNotifier$1@284355a
+      transactionServices = class com.ibm.ws.cdi.impl.weld.TransactionServicesImpl@795a0336
+      contextId = "security"
+      NO_EXCEPTION_MARKER = class java.lang.RuntimeException@7653a668
+      resolver = class org.jboss.weld.resolution.TypeSafeObserverResolver@7feafe68
+      sharedObjectCache = class org.jboss.weld.resources.SharedObjectCache@20006c1a
+      strict = true
+      currentEventMetadata = class org.jboss.weld.event.CurrentEventMetadata@5ce73a2a
+      eventTypeCheckCache = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@6f65049c
+      asyncEventExecutor = class com.ibm.ws.concurrent.ee.ManagedExecutorServiceImpl@758dc133
+      timerExecutor = class com.ibm.ws.threading.internal.ScheduledExecutorImpl@3b06bd42
+      securityServices = class com.ibm.ws.cdi.impl.DefaultCDI20SecurityService@1e06490c
+      requestContextHolder = class org.jboss.weld.util.LazyValueHolder$1@63f458a4
+    enabledBeans = class java.util.concurrent.CopyOnWriteArrayList@18da12d2
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@4f490977
+      array = class java.lang.Object[33]
+    sharedBeans = class java.util.concurrent.CopyOnWriteArrayList@d4d2daf
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@582607d2
+      array = class java.lang.Object[2]
+    specializedBeans = class java.util.concurrent.CopyOnWriteArrayList@67dd79b5
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@23c8dd79
+      array = class java.lang.Object[0]
+    decorators = class java.util.concurrent.CopyOnWriteArrayList@136d50fc
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@48fb709a
+      array = class java.lang.Object[0]
+    interceptors = class java.util.concurrent.CopyOnWriteArrayList@5be99cc1
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@1e08a62b
+      array = class java.lang.Object[0]
+    namespaces = class java.util.concurrent.CopyOnWriteArrayList@3f2df246
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@414c8219
+      array = class java.lang.Object[3]
+    observers = class java.util.concurrent.CopyOnWriteArrayList@333134c7
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@366490b5
+      array = class java.lang.Object[0]
+    beanSet = null
+    managers = class java.util.HashSet@4aa268ed
+      serialVersionUID = -5024744406713321676
+      map = class java.util.HashMap@6e05fcd2
+      PRESENT = class java.lang.Object@2f895ccc
+      MAX_ARRAY_SIZE = 2147483639
+    accessibleManagers = class java.util.HashSet@5d3afaec
+      serialVersionUID = -5024744406713321676
+      map = class java.util.HashMap@32bf81a7
+      PRESENT = class java.lang.Object@2f895ccc
+      MAX_ARRAY_SIZE = 2147483639
+    id = "security#security.war"
+    contextId = "security"
+    interceptorModelRegistry = class java.util.concurrent.ConcurrentHashMap@dd59ccf
+      serialVersionUID = 7249069246763182397
+      MAXIMUM_CAPACITY = 1073741824
+      DEFAULT_CAPACITY = 16
+      MAX_ARRAY_SIZE = 2147483639
+      DEFAULT_CONCURRENCY_LEVEL = 16
+      LOAD_FACTOR = 0.75
+      TREEIFY_THRESHOLD = 8
+      UNTREEIFY_THRESHOLD = 6
+      MIN_TREEIFY_CAPACITY = 64
+      MIN_TRANSFER_STRIDE = 16
+      RESIZE_STAMP_BITS = 16
+      MAX_RESIZERS = 65535
+      RESIZE_STAMP_SHIFT = 16
+      MOVED = -1
+      TREEBIN = -2
+      RESERVED = -3
+      HASH_BITS = 2147483647
+      NCPU = 4
+      serialPersistentFields = class java.io.ObjectStreamField[3]
+      table = null
+      nextTable = null
+      baseCount = 0
+      sizeCtl = 0
+      transferIndex = 0
+      cellsBusy = 0
+      counterCells = null
+      keySet = null
+      values = null
+      entrySet = null
+      U = class jdk.internal.misc.Unsafe@69c4fdeb
+      SIZECTL = 20
+      TRANSFERINDEX = 32
+      BASECOUNT = 24
+      CELLSBUSY = 36
+      CELLVALUE = 144
+      ABASE = 16
+      ASHIFT = 2
+      keySet = null
+      values = null
+    interceptorMetadataReader = class org.jboss.weld.interceptor.reader.InterceptorMetadataReader@37f816be
+      manager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+      plainInterceptorMetadataCache = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@471f4f0d
+      cdiInterceptorMetadataCache = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@40798c98
+      interceptorToInterceptorMetadataFunction = class org.jboss.weld.interceptor.reader.InterceptorMetadataReader$$Lambda$258/0x0000000801d2f440@1ef7a677
+    containerLifecycleEvents = class org.jboss.weld.bootstrap.events.ContainerLifecycleEvents@7c9d0532
+      everythingObserved = false
+      processAnnotatedTypeObserved = true
+      processBeanObserved = true
+      processBeanAttributesObserved = true
+      processInjectionPointObserved = true
+      processInjectionTargetObserved = true
+      processProducerObserved = true
+      processObserverMethodObserved = false
+      discovery = class org.jboss.weld.bootstrap.events.RequiredAnnotationDiscovery@266fa802
+      preloader = class org.jboss.weld.bootstrap.events.ContainerLifecycleEventPreloader@5f4c457c
+    registry = class org.jboss.weld.bootstrap.SpecializationAndEnablementRegistry@6ed2b175
+      specializedBeanResolvers = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@121234a9
+      environmentByManager = class java.util.concurrent.ConcurrentHashMap@1a4bc56a
+      specializedBeans = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@350e4bd3
+      specializedBeansMap = class java.util.concurrent.ConcurrentHashMap@1e8f1044
+    currentInjectionPoint = class org.jboss.weld.injection.CurrentInjectionPoint@6e44f5ac
+      threadLocalStack = class org.jboss.weld.injection.ThreadLocalStack$1@7f5da43c
+      NULL_REFERENCE = class org.jboss.weld.injection.ThreadLocalStack$2@74d5f28d
+    clientProxyOptimization = false
+    validationFailureCallbacks = class java.util.concurrent.CopyOnWriteArrayList@64a38f12
+      serialVersionUID = 8673264195747942595
+      lock = class java.lang.Object@4a5d059a
+      array = class java.lang.Object[0]
+    requestInitializedEvent = class org.jboss.weld.util.LazyValueHolder$1@45b154ad
+      val$supplier = class org.jboss.weld.manager.BeanManagerImpl$$Lambda$268/0x0000000801d2cc40@3912cf07
+      value = null
+    requestBeforeDestroyedEvent = class org.jboss.weld.util.LazyValueHolder$1@320bf743
+      val$supplier = class org.jboss.weld.manager.BeanManagerImpl$$Lambda$270/0x0000000801d2c040@523f4ef1
+      value = null
+    requestDestroyedEvent = class org.jboss.weld.util.LazyValueHolder$1@7bab9d3b
+      val$supplier = class org.jboss.weld.manager.BeanManagerImpl$$Lambda$271/0x0000000801d2b840@5364b79c
+      value = null
+  this$0 = class org.jboss.weld.injection.producer.ResourceInjector@39c745d5
+    resourceInjectionsHierarchy = class java.util.Collections$EmptyList@72f8df41
+      serialVersionUID = 8842843931221139166
+      modCount = 0
+      MAX_ARRAY_SIZE = 2147483639
+    injectableFields = class org.jboss.weld.util.collections.ImmutableTinyList$Singleton@44f0ea4b
+      serialVersionUID = 1
+      element = class org.jboss.weld.util.collections.ImmutableTinySet$Singleton@5dc06212
+      modCount = 0
+      MAX_ARRAY_SIZE = 2147483639
+    initializerMethods = class org.jboss.weld.util.collections.ImmutableTinyList$Singleton@471ae6ed
+      serialVersionUID = 1
+      element = class java.util.Collections$EmptySet@469b7179
+      modCount = 0
+      MAX_ARRAY_SIZE = 2147483639
+  beanManager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+  injectionTarget = class org.jboss.weld.injection.producer.BeanInjectionTarget@5bf67bea
+    bean = class org.jboss.weld.bean.ManagedBean@3084643
+      proxiable = true
+      passivationCapableBean = true
+      passivationCapableDependency = true
+      hasPostConstructCallback = true
+      annotatedType = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      enhancedAnnotatedItem = null
+      producer = class org.jboss.weld.injection.producer.BeanInjectionTarget@5bf67bea
+      type = class java.lang.Class@2671257f
+      preInitialized = false
+      proxyRequired = true
+      producer = null
+      ignoreFinalMethods = false
+      beanManager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+      initialized = true
+      qualifiers = null
+      contextualInstanceStrategy = class org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy@40939eb3
+      attributes = class org.jboss.weld.bean.attributes.ImmutableBeanAttributes@68731896
+      identifier = class org.jboss.weld.bean.StringBeanIdentifier@2f75a0e0
+    beanManager = class org.jboss.weld.manager.BeanManagerImpl@24d0632a
+    type = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+    injectionPoints = class org.jboss.weld.util.collections.ImmutableTinySet$Singleton@4cd37eb3
+      serialVersionUID = 1
+      element = class org.jboss.weld.injection.FieldInjectionPoint@400842c1
+      MAX_ARRAY_SIZE = 2147483639
+    instantiator = class org.jboss.weld.injection.producer.DefaultInstantiator@218f2985
+      constructor = class org.jboss.weld.injection.ConstructorInjectionPoint@2c247449
+    injector = class org.jboss.weld.injection.producer.ResourceInjector@39c745d5
+    invoker = class org.jboss.weld.injection.producer.DefaultLifecycleCallbackInvoker@66a3aca
+      accessiblePostConstructMethods = class org.jboss.weld.util.collections.ImmutableTinyList$Singleton@8d46fd1
+      accessiblePreDestroyMethods = class java.util.Collections$EmptyList@72f8df41
+  annotatedType = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+    javaClass = class java.lang.Class@2671257f
+      ANNOTATION = 8192
+      ENUM = 16384
+      SYNTHETIC = 4096
+      cachedConstructor = null
+      name = "security.admin.organization.OrganizationListView"
+      module = class java.lang.Module@7a363899
+      packageName = "security.admin.organization"
+      componentType = null
+      allPermDomain = class java.security.ProtectionDomain@3c81bf5b
+      reflectionData = class java.lang.ref.SoftReference@486cbbdd
+      classRedefinedCount = 0
+      genericInfo = class sun.reflect.generics.repository.ClassRepository@14f483d5
+      EMPTY_CLASS_ARRAY = class java.lang.Class[0]
+      serialVersionUID = 3206093459760846163
+      serialPersistentFields = class java.io.ObjectStreamField[0]
+      reflectionFactory = class jdk.internal.reflect.ReflectionFactory@57725528
+      enumConstants = null
+      enumConstantDirectory = null
+      annotationData = class java.lang.Class$AnnotationData@31fc0c3d
+      annotationType = null
+      classValueMap = null
+    constructors = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType$BackedAnnotatedConstructors@4f62772b
+      this$0 = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      this$0 = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      value = null
+    methods = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType$BackedAnnotatedMethods@7e40e8ae
+      this$0 = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      this$0 = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      value = null
+    fields = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType$BackedAnnotatedFields@52323d8a
+      this$0 = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      this$0 = class org.jboss.weld.annotated.slim.backed.BackedAnnotatedType@639e0c21
+      value = null
+    sharedObjectCache = class org.jboss.weld.resources.SharedObjectCache@20006c1a
+      sharedSets = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@26f2e0b4
+      sharedMaps = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@436b36f4
+      typeClosureHolders = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@9002a33
+    reflectionCache = class org.jboss.weld.resources.HotspotReflectionCache@79d46e7e
+      annotationTypeLock = class java.lang.Class@326de728
+      store = class org.jboss.weld.metadata.TypeStore@78e3889e
+      ANNOTATIONS_FUNCTION = class org.jboss.weld.resources.DefaultReflectionCache$$Lambda$229/0x0000000801cee040@3bd9360a
+      DECLARED_ANNOTATIONS_FUNCTION = class org.jboss.weld.resources.DefaultReflectionCache$$Lambda$231/0x0000000801ced840@1b963087
+      annotations = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@4074e420
+      declaredAnnotations = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@24b733c8
+      backedAnnotatedTypeAnnotations = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@562c3832
+      annotationClasses = class org.jboss.weld.util.cache.ReentrantMapBackedComputingCache@7c143878
+    identifier = class org.jboss.weld.annotated.slim.AnnotatedTypeIdentifier@292fc9b8
+      NULL_BDA_ID = "org.jboss.weld.annotated.slim.AnnotatedTypeIdentifier.null"
+      SYNTHETIC_ANNOTATION_SUFFIX = "syntheticAnnotation"
+      serialVersionUID = -264184070652700144
+      contextId = "security"
+      bdaId = "security#security.war"
+      className = "security.admin.organization.OrganizationListView"
+      suffix = null
+      modified = false
+      hashCode = 920217627
+    typeClosure = class org.jboss.weld.annotated.enhanced.TypeClosureLazyValueHolder@75283899
+      type = class java.lang.Class@2671257f
+      value = class org.jboss.weld.util.collections.ImmutableTinySet$Tripleton@26de567d
+    baseType = class java.lang.Class@2671257f
+  target = class security.admin.organization.OrganizationListView@3f9820e8
+
